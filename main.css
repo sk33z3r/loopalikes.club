@@ -4,6 +4,11 @@ body {
     font-size: 14px;
     font-family: sans-serif;
     margin: 0;
+    text-align: center;
+}
+
+p {
+    margin: 15px 0;
 }
 
 a, a:visited, a:active {
@@ -16,19 +21,41 @@ a:hover, a:focus {
     color: #777777;
 }
 
-img {
+.comp img {
     width: 250px;
     height: 250px;
 }
 
+button, button:visited, button:active, button:focus {
+    height: 150px;
+    width: 350px;
+    color: #FFFFFF;
+    background: #2d2f4b;
+    border: 1px solid #000000;
+    font-size: 26px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+button:hover {
+    color: #FFFFFF;
+    background: #22243a;
+}
+
 #about {
     padding: 10px;
-    text-align: center;
+    font-size: 24px;
+}
+
+#about img {
+    height: 500px;
+    width: 500px;
 }
 
 #container {
-    margin: 25px auto;
+    margin: 0 auto;
     background: #22243a;
+    height: 100%;
     width: 1100px;
     display: flex;
     flex-direction: column;
@@ -59,9 +86,31 @@ img {
         font-size: 12px;
     }
 
-    img {
+    p {
+        margin: 25px 0;
+    }
+
+    .comp img {
         width: 175px;
         height: 175px;
+    }
+
+    button, button:visited, button:active, button:focus {
+        height: 100px;
+        width: 200px;
+        font-size: 20px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    #about {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #about img {
+        height: 375px;
+        width: 375px;
     }
 
     #container {
