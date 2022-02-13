@@ -21,11 +21,6 @@ a:hover, a:focus {
     color: #777777;
 }
 
-.comp img {
-    width: 250px;
-    height: 250px;
-}
-
 button, button:visited, button:active, button:focus {
     height: 150px;
     width: 350px;
@@ -44,7 +39,7 @@ button:hover {
 
 #about {
     padding: 10px;
-    font-size: 24px;
+    font-size: 26px;
 }
 
 #about img {
@@ -65,7 +60,7 @@ button:hover {
 }
 
 .comp {
-    margin: 15px auto;
+    margin: 20px auto;
     width: 1000px;
     display: flex;
     flex-direction: row;
@@ -78,6 +73,15 @@ button:hover {
     width: 150px;
     text-align: center;
     font-size: 24px;
+}
+
+.comp img {
+    width: 250px;
+    height: 250px;
+}
+
+.comp h3, .comp h1 {
+    margin: 0;
 }
 
 @media (max-width: 1100px) {
