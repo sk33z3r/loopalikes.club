@@ -182,6 +182,10 @@ button:hover {
     justify-content: center;
 }
 
+.label p {
+    font-size: 24px;
+}
+
 @media (max-width: 1100px) {
 
     body {
@@ -262,7 +266,7 @@ button:hover {
     }
 
     .label p {
-        font-size: 17px;
+        font-size: 21px;
     }
 
     .filters {

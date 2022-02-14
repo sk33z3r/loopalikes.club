@@ -41,7 +41,7 @@
                     <?php $count = 0; while ( $count < count($loopalikes["valley"]) ) { ?>
                         <div class="comp">
                         <div class="label">
-                            <p><b><?php echo $loopalikes["valley"][$count]["id_text"] ?></b></p>
+                            <p><big><?php echo $loopalikes["valley"][$count]["id_text"] ?></big></p>
                             <p><?php echo $loopalikes["valley"][$count]["name"] ?></p>
                         </div>
                         <img src="<?php echo $loopalikes["valley"][$count]["id"] ?>/900x900/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["valley"][$count]["id"] ?>"/>
@@ -54,7 +54,7 @@
                     <?php $count = 0; while ( $count < count($loopalikes["unique"]) ) { ?>
                         <div class="comp">
                         <div class="label">
-                            <p><b><?php echo $loopalikes["unique"][$count]["id"] ?></b></p>
+                            <p><big><?php echo $loopalikes["unique"][$count]["id"] ?></big></p>
                             <p><?php echo $loopalikes["unique"][$count]["name"] ?></p>
                         </div>
                         <img src="<?php echo $loopalikes["unique"][$count]["id"] ?>/900x900/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["unique"][$count]["id"] ?>"/>
