@@ -33,12 +33,14 @@ a:hover, a:focus {
 
 button {
     font-family: 'Unifont', sans-serif;
+    border-radius: 15px;
+    border: 1px solid #0d0e16;
+    margin: 5px;
 }
 
 button, button:visited, button:active, button:focus {
     color: #FFFFFF;
     background: #161726;
-    border: 1px solid #0d0e16;
 }
 
 button:hover {
@@ -90,11 +92,9 @@ button:hover {
 }
 
 .filters button {
-    margin: 0;
     width: 485px;
     height: 50px;
     font-size: 18px;
-    border-radius: 15px;
 }
 
 .drop-btn {
@@ -108,11 +108,9 @@ button:hover {
 }
 
 .drop-btn button {
-    margin: 0;
     width: 1000px;
     height: 75px;
     font-size: 36px;
-    border-radius: 15px;
 }
 
 .text {
@@ -135,6 +133,7 @@ button:hover {
 
 .home {
     margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 
 .comp {
@@ -219,12 +218,12 @@ button:hover {
         margin: 10px auto;
         width: 95%;
         flex-wrap: wrap;
+        margin-bottom: 50px;
     }
 
     .comp img {
         width: 150px;
         height: 150px;
-        margin-bottom: 50px;
     }
 
     .category h2 {
@@ -240,7 +239,6 @@ button:hover {
     }
 
     .text button {
-        margin: 0 15px;
         width: 100px;
         height: 50px;
         font-size: 14px;
@@ -260,9 +258,13 @@ button:hover {
     }
 
     .label {
-        margin: 0 50px;
-        width: 150px;
-        height: 150px;
+        margin: 0 0 15px 0;
+        width: 100%;
+        height: 60px;
+        flex-basis: 95%;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: space-between;
     }
 
     .label p {
@@ -274,10 +276,9 @@ button:hover {
     }
 
     .filters button {
-        width: 175px;
-        height: 35px;
-        font-size: 12px;
-        border-radius: 10px;
+        width: 160px;
+        height: 50px;
+        font-size: 14px;
     }
 
     .drop-btn {
@@ -289,7 +290,6 @@ button:hover {
         width: 95%;
         height: 75px;
         font-size: 24px;
-        border-radius: 10px;
     }
 
 }
