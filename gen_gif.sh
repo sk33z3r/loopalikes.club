@@ -31,7 +31,7 @@ get_all() {
             id=$((num+set))
             echo "    Getting and resizing images for Loophead #$id..."
             url_num=$(printf "%02d" ${num_map[$num]})
-            mkdir -p $id/{original,900x900}
+            mkdir -p $id/{original,vars}
             echo "      Downloading PNGs from IPFS..."
             curl="curl -s --connect-timeout 60 --max-time 300 ${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${set}"
             orig="$id/original/"
@@ -62,7 +62,7 @@ get_all() {
             ${curl}_4_4.png > ${orig}4-4.png
             sleep 3
             echo "      Resizing to 900x900..."
-            convert="-alpha remove -resize 900x900 $id/900x900/"
+            convert="-alpha remove -resize 900x900 $id/vars/"
             convert ${orig}0-0.png ${convert}0-0.png
             convert ${orig}0-1.png ${convert}0-1.png
             convert ${orig}0-2.png ${convert}0-2.png
@@ -108,7 +108,7 @@ get_one() {
     if [ -z $num ]; then num=100; fi
     set=$((id-num))
     url_num=$(printf "%02d" ${num_map[$num]})
-    mkdir -p $id/{original,900x900}
+    mkdir -p $id/{original,vars}
     echo "    Downloading PNGs from IPFS..."
     curl="curl -s --connect-timeout 60 --max-time 300 ${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${set}"
     orig="$id/original/"
@@ -139,7 +139,7 @@ get_one() {
     ${curl}_4_4.png > ${orig}4-4.png
     sleep 3
     echo "    Resizing to 900x900..."
-    convert="-alpha remove -resize 900x900 $id/900x900/"
+    convert="-alpha remove -resize 900x900 $id/vars/"
     convert ${orig}0-0.png ${convert}0-0.png
     convert ${orig}0-1.png ${convert}0-1.png
     convert ${orig}0-2.png ${convert}0-2.png
@@ -193,10 +193,10 @@ make_all() {
             url_num=$(printf "%02d" ${num_map[$num]})
             bg=0
             while [ $bg -lt 5 ]; do
-                file0="${id}/900x900/${bg}-0.png"
-                file1="${id}/900x900/${bg}-1.png"
-                file2="${id}/900x900/${bg}-2.png"
-                file3="${id}/900x900/${bg}-3.png"
+                file0="${id}/vars/${bg}-0.png"
+                file1="${id}/vars/${bg}-1.png"
+                file2="${id}/vars/${bg}-2.png"
+                file3="${id}/vars/${bg}-3.png"
                 new_file="$id/${id}_${bg}_throb_900x900.gif"
                 echo "    Generating throbbing brain gif for #$id background $bg..."
                 convert -loop 0 -delay 20 $file0 -delay 15 $file1 -delay 10 $file2 -delay 10 $file3 -delay 10 $file2 -delay 15 $file1 -delay 10 $file0 $new_file
@@ -204,7 +204,7 @@ make_all() {
                 convert $new_file -font $font -pointsize 30 -draw "fill $color rectangle ${rect[0]},${rect[1]} ${rect[2]},${rect[3]} fill white text ${text[0]},${text[1]} '${text[2]}'" $new_file
                 ((bg++))
             done
-            cd $id/900x900
+            cd $id/vars
             filelist_random=$(ls | sort -R)
             random_file="$root/$id/${id}_random_900x900.gif"
             echo "    Generating random cycle gif for #$id..."
@@ -240,10 +240,10 @@ make_one() {
     url_num=$(printf "%02d" ${num_map[$num]})
     bg=0
     while [ $bg -lt 5 ]; do
-        file0="${id}/900x900/${bg}-0.png"
-        file1="${id}/900x900/${bg}-1.png"
-        file2="${id}/900x900/${bg}-2.png"
-        file3="${id}/900x900/${bg}-3.png"
+        file0="${id}/vars/${bg}-0.png"
+        file1="${id}/vars/${bg}-1.png"
+        file2="${id}/vars/${bg}-2.png"
+        file3="${id}/vars/${bg}-3.png"
         new_file="$id/${id}_${bg}_throb_900x900.gif"
         echo "  Generating throbbing brain gif for #$id background $bg..."
         convert -loop 0 -delay 20 $file0 -delay 15 $file1 -delay 10 $file2 -delay 10 $file3 -delay 10 $file2 -delay 15 $file1 -delay 10 $file0 $id/${id}_${bg}_throb_900x900.gif
@@ -251,7 +251,7 @@ make_one() {
         convert $new_file -font $font -pointsize 30 -draw "fill $color rectangle ${rect[0]},${rect[1]} ${rect[2]},${rect[3]} fill white text ${text[0]},${text[1]} '${text[2]}'" $new_file
         ((bg++))
     done
-    cd $id/900x900
+    cd $id/vars
     filelist_random=$(ls | sort -R)
     random_file="$root/$id/${id}_random_900x900.gif"
     echo "  Generating random cycle gif for #$id..."
@@ -278,7 +278,7 @@ smash_sane_gif() {
     file_list=()
     id=101
     while [ $id -lt 1101 ]; do
-        imgs="$root/$id/900x900"
+        imgs="$root/$id/vars"
         cd $imgs
         file=$(ls | sort -R | tail -1)
         cd $root
@@ -295,7 +295,7 @@ smash_everything_gif() {
     file_list=".temp_list" && touch $file_list
     id=101
     while [ $id -lt 1101 ]; do
-        imgs="$root/$id/900x900"
+        imgs="$root/$id/vars"
         cd $imgs
         file=$(ls | sort -R | tail -1)
         cd $root
@@ -307,6 +307,10 @@ smash_everything_gif() {
     random_list=$(cat $file_list | sort -R)
     convert -delay 25 -loop 0 $random_list $smash_file
     rm $file_list
+}
+
+shrink_static() {
+    find $root -type f -name "*.png" -exec convert "{}" -resize 250x250 "{}" \;
 }
 
 echo "Running $1 command..."
@@ -367,6 +371,7 @@ case $1 in
     ;;
     smash_all) smash_sane_gif;;
     smash_chaos) smash_everything_gif;;
+    shrink) shrink_static;;
     *) echo "You didn't specify a command: $0 [all|one|list|get_all|get_one|get_list|make_all|make_one|make_list|smash_all|smash_chaos] {ID}"; exit 1;;
 esac
 
