@@ -3,3 +3,4 @@ comps/
 .id_list
 *.gif
 *.json
+rename.sh
