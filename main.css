@@ -38,6 +38,7 @@ button:hover {
 }
 
 #about img {
+    margin: 15px 0;
     height: 500px;
     width: 500px;
 }
@@ -80,7 +81,6 @@ button:hover {
     height: 50px;
     font-size: 16px;
     border-radius: 15px;
-    margin-bottom: 15px;
 }
 
 .drop-btn {
@@ -99,7 +99,6 @@ button:hover {
     height: 75px;
     font-size: 24px;
     border-radius: 15px;
-    margin-bottom: 15px;
 }
 
 .text {
@@ -120,22 +119,18 @@ button:hover {
     width: 1000px;
 }
 
+.home {
+    margin-bottom: 50px;
+}
+
 .comp {
-    margin: 20px auto;
+    margin: 40px auto;
     width: 1000px;
     display: flex;
     flex-direction: row;
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
-}
-
-.comp button {
-    height: 150px;
-    width: 350px;
-    font-size: 26px;
-    border-radius: 15px;
-    margin-bottom: 15px;
 }
 
 .comp p {
@@ -156,7 +151,6 @@ button:hover {
     padding: 5px 300px;
     background: #2d2f4b;
     border-radius: 15px;
-    margin-bottom: 15px;
 }
 
 .label {
@@ -195,7 +189,6 @@ button:hover {
         width: 200px;
         font-size: 20px;
         border-radius: 10px;
-        margin-bottom: 10px;
     }
 
     #about {
@@ -224,10 +217,10 @@ button:hover {
     }
 
     .category h2 {
-        margin: 15px 0;
-        padding: 5px 10px;
+        margin: 15px auto;
+        width: 92%;
+        padding: 5px;
         border-radius: 10px;
-        margin-bottom: 20px;
     }
 
     .text {
@@ -271,7 +264,6 @@ button:hover {
         height: 35px;
         font-size: 12px;
         border-radius: 10px;
-        margin-bottom: 10px;
     }
 
     .drop-btn {
@@ -284,7 +276,6 @@ button:hover {
         height: 50px;
         font-size: 18px;
         border-radius: 10px;
-        margin-bottom: 10px;
     }
 
 }

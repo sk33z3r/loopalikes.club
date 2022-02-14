@@ -32,10 +32,10 @@
                 <button>Loopheads Airdrop No. 1: IDs #101 - #1100</button>
             </div>
             <div class="drop" id="drop1">
-                <div class="filters">
+                <!-- <div class="filters">
                     <button>Uncanny Valley</button>
                     <button>Unique Characters</button>
-                </div>
+                </div> -->
                 <div class="category" id="drop1-valley">
                     <h2>Uncanny Valley Series</h2>
                     <?php $count = 0; while ( $count < count($loopalikes["valley"]) ) { ?>
