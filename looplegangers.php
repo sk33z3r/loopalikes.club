@@ -44,7 +44,7 @@
                             <p><big><?php echo $loopalikes["valley"][$count]["id_text"] ?></big></p>
                             <p><?php echo $loopalikes["valley"][$count]["name"] ?></p>
                         </div>
-                        <img src="<?php echo $loopalikes["valley"][$count]["id"] ?>/900x900/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["valley"][$count]["id"] ?>"/>
+                        <img src="<?php echo $loopalikes["valley"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["valley"][$count]["id"] ?>"/>
                         <img src="comps/<?php echo $loopalikes["valley"][$count]["file"] ?>" alt="<?php echo $loopalikes["valley"][$count]["name"] ?>"/>
                     </div>
                     <?php $count++; } ?>
@@ -54,10 +54,10 @@
                     <?php $count = 0; while ( $count < count($loopalikes["unique"]) ) { ?>
                         <div class="comp">
                         <div class="label">
-                            <p><big><?php echo $loopalikes["unique"][$count]["id"] ?></big></p>
+                            <p><big>#<?php echo $loopalikes["unique"][$count]["id"] ?></big></p>
                             <p><?php echo $loopalikes["unique"][$count]["name"] ?></p>
                         </div>
-                        <img src="<?php echo $loopalikes["unique"][$count]["id"] ?>/900x900/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["unique"][$count]["id"] ?>"/>
+                        <img src="<?php echo $loopalikes["unique"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["unique"][$count]["id"] ?>"/>
                         <img src="comps/<?php echo $loopalikes["unique"][$count]["file"] ?>" alt="<?php echo $loopalikes["unique"][$count]["name"] ?>"/>
                     </div>
                     <?php $count++; } ?>
