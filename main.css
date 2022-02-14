@@ -8,7 +8,7 @@ body {
 }
 
 p {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 a, a:visited, a:active {
@@ -22,14 +22,9 @@ a:hover, a:focus {
 }
 
 button, button:visited, button:active, button:focus {
-    height: 150px;
-    width: 350px;
     color: #FFFFFF;
-    background: #2d2f4b;
-    border: 1px solid #000000;
-    font-size: 26px;
-    border-radius: 15px;
-    margin-bottom: 15px;
+    background: #161726;
+    border: 1px solid #0d0e16;
 }
 
 button:hover {
@@ -69,8 +64,27 @@ button:hover {
     justify-content: space-evenly;
 }
 
-.text {
-    margin: 0 auto;
+.filters {
+    margin: 0;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.filters button {
+    margin: 0;
+    width: 485px;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.drop-btn {
+    margin: 25px 0;
     width: 1000px;
     display: flex;
     flex-direction: row;
@@ -79,11 +93,23 @@ button:hover {
     justify-content: space-evenly;
 }
 
-.text button {
-    margin: 0 25px;
-    width: 200px;
-    height: 50px;
-    font-size: 16px;
+.drop-btn button {
+    margin: 0;
+    width: 1000px;
+    height: 75px;
+    font-size: 24px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.text {
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
 }
 
 .text h3, .text h1 {
@@ -104,6 +130,14 @@ button:hover {
     justify-content: space-evenly;
 }
 
+.comp button {
+    height: 150px;
+    width: 350px;
+    font-size: 26px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
 .comp p {
     width: 150px;
     text-align: center;
@@ -114,12 +148,30 @@ button:hover {
     width: 250px;
     height: 250px;
     border: 1px solid #FFFFFF;
+    border-radius: 150px;
 }
 
 .category h2 {
     margin: 20px 0;
     padding: 5px 300px;
     background: #2d2f4b;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.label {
+    width: 250px;
+    height: 250px;
+    font-size: 24px;
+    background: #2d2f4b;
+    border: 1px solid #FFFFFF;
+    border-radius: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 @media (max-width: 1100px) {
@@ -129,12 +181,13 @@ button:hover {
     }
 
     p {
-        margin: 25px 0;
+        margin: 5px 0;
     }
 
     .comp img {
         width: 175px;
         height: 175px;
+        margin-bottom: 50px;
     }
 
     button, button:visited, button:active, button:focus {
@@ -170,14 +223,11 @@ button:hover {
         flex-wrap: wrap;
     }
 
-    .comp p {
-        width: 175px;
-        font-size: 16px;
-    }
-
     .category h2 {
         margin: 15px 0;
-        padding: 5px 25px;
+        padding: 5px 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
     }
 
     .text {
@@ -203,6 +253,38 @@ button:hover {
     .text h3 {
         font-size: 12px;
         padding: 0 5px;
+    }
+
+    .label {
+        margin: 0 50px;
+        width: 175px;
+        height: 175px;
+        font-size: 14px;
+    }
+
+    .filters {
+        width: 95%;
+    }
+
+    .filters button {
+        width: 200px;
+        height: 35px;
+        font-size: 12px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .drop-btn {
+        margin: 25px 0;
+        width: 100%;
+    }
+
+    .drop-btn button {
+        width: 95%;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 10px;
+        margin-bottom: 10px;
     }
 
 }
