@@ -1,0 +1,227 @@
+{
+    "valley": [
+        {
+            "name": "Chuck Norris",
+            "id_text": "X01 / 1001",
+            "id": "1001",
+            "file": "norris.png"
+        },
+        {
+            "name": "Bill Clinton",
+            "id_text": "X05 / 1005",
+            "id": "1005",
+            "file": "clinton.png"
+        },
+        {
+            "name": "Action Jack Barker",
+            "id_text": "X06 / 1015",
+            "id": "1015",
+            "file": "jack.png"
+        },
+        {
+            "name": "Iron Man",
+            "id_text": "X11 / 1016",
+            "id": "411",
+            "file": "ironman.png"
+        },
+        {
+            "name": "Celine Dion",
+            "id_text": "X25 / 1034",
+            "id": "1034",
+            "file": "dion.png"
+        },
+        {
+            "name": "Pete Davidson",
+            "id_text": "X28 / 1037",
+            "id": "1037",
+            "file": "davidson.png"
+        },
+        {
+            "name": "Stanley",
+            "id_text": "X29 / 1038",
+            "id": "729",
+            "file": "stanley.png"
+        },
+        {
+            "name": "Bob the Consultant",
+            "id_text": "X32 / 1041",
+            "id": "1041",
+            "file": "bob.png"
+        },
+        {
+            "name": "Zoe Saldana",
+            "id_text": "X36 / 1045",
+            "id": "236",
+            "file": "saldana.png"
+        },
+        {
+            "name": "Al Capone",
+            "id_text": "X38 / 1047",
+            "id": "1047",
+            "file": "capone.png"
+        },
+        {
+            "name": "Mr. Spacely",
+            "id_text": "X42 / 1051",
+            "id": "1051",
+            "file": "spacely.png"
+        },
+        {
+            "name": "Dr. Phil",
+            "id_text": "X51 / 1060",
+            "id": "1060",
+            "file": "phil.png"
+        },
+        {
+            "name": "Bill Murray",
+            "id_text": "X56 / 1065",
+            "id": "1065",
+            "file": "murray.png"
+        },
+        {
+            "name": "Amy Schumer",
+            "id_text": "X57 / 1066",
+            "id": "1066",
+            "file": "schumer.png"
+        },
+        {
+            "name": "Nicolas Cage",
+            "id_text": "X58 / 1069",
+            "id": "1069",
+            "file": "cage.png"
+        },
+        {
+            "name": "Freddie Mercury",
+            "id_text": "X66 / 1075",
+            "id": "1075",
+            "file": "mercury.png"
+        },
+        {
+            "name": "Rick Moranis",
+            "id_text": "X70 / 1079",
+            "id": "1079",
+            "file": "moranis.png"
+        },
+        {
+            "name": "Jesse Quick",
+            "id_text": "X72 / 1083",
+            "id": "1083",
+            "file": "quick.png"
+        },
+        {
+            "name": "David Hasselhoff",
+            "id_text": "X73 / 1084",
+            "id": "1084",
+            "file": "hoff.png"
+        },
+        {
+            "name": "Paul Shaffer",
+            "id_text": "X78 / 1087",
+            "id": "1087",
+            "file": "shaffer.png"
+        },
+        {
+            "name": "Doc Brown",
+            "id_text": "X83 / 1092",
+            "id": "1092",
+            "file": "doc.png"
+        }
+    ],
+    "unique": [
+        {
+            "name": "Skeletor",
+            "id": "110",
+            "file": "skeletor.png"
+        },
+        {
+            "name": "Dr. Gero",
+            "id": "143",
+            "file": "gero.png"
+        },
+        {
+            "name": "Piccolo",
+            "id": "370",
+            "file": "piccolo.png"
+        },
+        {
+            "name": "Roger Klotz",
+            "id": "393",
+            "file": "klotz.png"
+        },
+        {
+            "name": "Brook",
+            "id": "510",
+            "file": "brook.png"
+        },
+        {
+            "name": "Rey Skywalker",
+            "id": "557",
+            "file": "skywalker.png"
+        },
+        {
+            "name": "Killface",
+            "id": "561",
+            "file": "killface.png"
+        },
+        {
+            "name": "Dr. Finklestein",
+            "id": "583",
+            "file": "finklestein.png"
+        },
+        {
+            "name": "Smurfette",
+            "id": "639",
+            "file": "smurfette.png"
+        },
+        {
+            "name": "White Walker",
+            "id": "656",
+            "file": "walker.png"
+        },
+        {
+            "name": "Aladdin",
+            "id": "714",
+            "file": "aladdin.png"
+        },
+        {
+            "name": "Ahsoka Tano",
+            "id": "758",
+            "file": "ahsoka.png"
+        },
+        {
+            "name": "@brojez",
+            "id": "770",
+            "file": "brojez.png"
+        },
+        {
+            "name": "The Riddler",
+            "id": "1006",
+            "file": "riddler.png"
+        },
+        {
+            "name": "Aang",
+            "id": "1026",
+            "file": "aang.png"
+        },
+        {
+            "name": "Thelma + Daphne",
+            "id": "1029",
+            "file": "thelma.png"
+        },
+        {
+            "name": "Whitebeard",
+            "id": "1052",
+            "file": "whitebeard.png"
+        },
+        {
+            "name": "Zeus",
+            "id": "1053",
+            "file": "zeus.png"
+        },
+        {
+            "name": "El Diablo",
+            "id": "1070",
+            "file": "diablo.png"
+        }
+    ]
+}
