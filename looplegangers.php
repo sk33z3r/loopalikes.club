@@ -14,7 +14,7 @@
         <title>Looplegangers</title>
         <meta name="description" content="A fan-made site showing loopalikes the community has noticed between the Loopheads and various celebrities/characters from pop culture.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -22,7 +22,7 @@
         <![endif]-->
         <div id="container">
             <div class="text">
-                <h1>Looplegangers Archive</h1>
+                <h1>Looplegangers</h1>
                 <h3>A list of loopalikes the community has noticed between Loopheads and pop-culture.</h3>
             </div>
             <div class="text">

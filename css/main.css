@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'Unifont';
+    src:  url('fonts/Unifont.woff') format('woff'),
+          url('fonts/Unifont.svg#Unifont') format('svg'),
+          url('fonts/Unifont.eot'),
+          url('fonts/Unifont.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #2d2f4b;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Unifont', sans-serif;
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+}
+
+a, a:visited, a:active {
+    text-decoration: none;
+    color: #aaaaaa;
+}
+
+a:hover, a:focus {
+    text-decoration: none;
+    color: #777777;
+}
+
+button {
+    font-family: 'Unifont', sans-serif;
+}
+
+button, button:visited, button:active, button:focus {
+    color: #FFFFFF;
+    background: #161726;
+    border: 1px solid #0d0e16;
+}
+
+button:hover {
+    color: #FFFFFF;
+    background: #22243a;
+}
+
+#about {
+    padding: 10px;
+    font-size: 26px;
+}
+
+#about img {
+    margin: 15px 0;
+    height: 500px;
+    width: 500px;
+}
+
+#container {
+    margin: 0 auto;
+    background: #22243a;
+    height: 100%;
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.drop {
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.filters {
+    margin: 0;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.filters button {
+    margin: 0;
+    width: 485px;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.drop-btn {
+    margin: 25px 0;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.drop-btn button {
+    margin: 0;
+    width: 1000px;
+    height: 75px;
+    font-size: 36px;
+    border-radius: 15px;
+}
+
+.text {
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.text h3, .text h1 {
+    margin: 10px 0;
+}
+
+.text hr {
+    width: 1000px;
+}
+
+.home {
+    margin-bottom: 50px;
+}
+
+.comp {
+    margin: 40px auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.comp p {
+    width: 150px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.comp img {
+    width: 250px;
+    height: 250px;
+    border: 1px solid #FFFFFF;
+    border-radius: 150px;
+}
+
+.category h2 {
+    margin: 20px 0;
+    padding: 5px 300px;
+    background: #2d2f4b;
+    border-radius: 15px;
+}
+
+.label {
+    width: 250px;
+    height: 250px;
+    font-size: 24px;
+    background: #2d2f4b;
+    border: 1px solid #FFFFFF;
+    border-radius: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+@media (max-width: 1100px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    #about {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #about img {
+        height: 350px;
+        width: 350px;
+    }
+
+    #container {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .drop {
+        width: 95%;
+    }
+
+    .comp {
+        margin: 10px auto;
+        width: 95%;
+        flex-wrap: wrap;
+    }
+
+    .comp img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 50px;
+    }
+
+    .category h2 {
+        margin: 15px auto;
+        width: 92%;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .text {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .text button {
+        margin: 0 15px;
+        width: 100px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .text hr {
+        width: 95%;
+    }
+
+    .text h1 {
+        font-size: 20px;
+    }
+
+    .text h3 {
+        font-size: 12px;
+        padding: 0 5px;
+    }
+
+    .label {
+        margin: 0 50px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .label p {
+        font-size: 17px;
+    }
+
+    .filters {
+        width: 95%;
+    }
+
+    .filters button {
+        width: 175px;
+        height: 35px;
+        font-size: 12px;
+        border-radius: 10px;
+    }
+
+    .drop-btn {
+        margin: 25px 0;
+        width: 95%;
+    }
+
+    .drop-btn button {
+        width: 95%;
+        height: 75px;
+        font-size: 24px;
+        border-radius: 10px;
+    }
+
+}
