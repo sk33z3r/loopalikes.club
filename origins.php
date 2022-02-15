@@ -26,8 +26,19 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div id="container">
+            <div id ="nav">
+                <div id="simple-nav">
+                    <a href="index.html"><button>HOME</button></a>
+                    <a href="looplegangers.php"><button>LOOPLEGANGERS</button></a>
+                </div>
+                <div id="ext-nav">
+                    <a href="https://loopheadexplorer.io"><button>LOOPHEAD EXPLORER</button></a>
+                    <a href="https://loopheads.info"><button>LOOPHEADS.INFO</button></a>
+                    <a href="https://loopheads.world"><button>LOOPHEADS.WORLD</button></a>
+                    <a href="https://opensea.io/collection/moody-brain-loopring"><button>OPENSEA COLLECTION</button></a>
+                </div>
+            </div>
             <div id="about">
-                <p><small><i>Check out the official collection on OpenSea: <a href="https://opensea.io/collection/moody-brain-loopring"><b>Moody Brain by Loopring</b></a></i></small></p>
                 <p><big>Loophead Origin Stories<big></p>
             </div>
             <?php $count = 0; while ( $count < count($lore) ) { ?>

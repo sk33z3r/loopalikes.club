@@ -26,6 +26,18 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div id="container">
+            <div id ="nav">
+                <div id="simple-nav">
+                    <a href="index.html"><button>HOME</button></a>
+                    <a href="origins.php"><button>ORIGIN STORIES</button></a>
+                </div>
+                <div id="ext-nav">
+                    <a href="https://loopheadexplorer.io"><button>LOOPHEAD EXPLORER</button></a>
+                    <a href="https://loopheads.info"><button>LOOPHEADS.INFO</button></a>
+                    <a href="https://loopheads.world"><button>LOOPHEADS.WORLD</button></a>
+                    <a href="https://opensea.io/collection/moody-brain-loopring"><button>OPENSEA COLLECTION</button></a>
+                </div>
+            </div>
             <div class="text">
                 <h1>Looplegangers</h1>
                 <h3>A list of loopalikes the community has noticed between Loopheads and pop-culture.</h3>
