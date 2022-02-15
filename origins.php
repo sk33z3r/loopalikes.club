@@ -14,6 +14,9 @@
         <meta name="description" content="A fan-made site with origin stories for the Loopheads characters.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="preload" href="css/fonts/Unifont.woff" as="font" type="font/woff" crossorigin>
+        <link rel="preload" href="css/fonts/Unifont.svg" as="font" type="font/svg" crossorigin>
+        <link rel="preload" href="css/fonts/Unifont.eot" as="font" type="font/embedded-opentype" crossorigin>
 
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
