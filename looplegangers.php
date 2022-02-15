@@ -43,8 +43,8 @@
                             <p><big><?php echo $loopalikes["valley"][$count]["id_text"] ?></big></p>
                             <p><?php echo $loopalikes["valley"][$count]["name"] ?></p>
                         </div>
-                        <img src="<?php echo $loopalikes["valley"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["valley"][$count]["id"] ?>"/>
-                        <img src="comps/<?php echo $loopalikes["valley"][$count]["file"] ?>" alt="<?php echo $loopalikes["valley"][$count]["name"] ?>"/>
+                        <img src="images/<?php echo $loopalikes["valley"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["valley"][$count]["id"] ?>"/>
+                        <img src="images/comps/<?php echo $loopalikes["valley"][$count]["file"] ?>" alt="<?php echo $loopalikes["valley"][$count]["name"] ?>"/>
                     </div>
                     <?php $count++; } ?>
                 </div>
@@ -56,8 +56,8 @@
                             <p><big>#<?php echo $loopalikes["unique"][$count]["id"] ?></big></p>
                             <p><?php echo $loopalikes["unique"][$count]["name"] ?></p>
                         </div>
-                        <img src="<?php echo $loopalikes["unique"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["unique"][$count]["id"] ?>"/>
-                        <img src="comps/<?php echo $loopalikes["unique"][$count]["file"] ?>" alt="<?php echo $loopalikes["unique"][$count]["name"] ?>"/>
+                        <img src="images/<?php echo $loopalikes["unique"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["unique"][$count]["id"] ?>"/>
+                        <img src="images/comps/<?php echo $loopalikes["unique"][$count]["file"] ?>" alt="<?php echo $loopalikes["unique"][$count]["name"] ?>"/>
                     </div>
                     <?php $count++; } ?>
                 </div>

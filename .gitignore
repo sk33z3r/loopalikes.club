@@ -1,6 +1,5 @@
-[0-9]*/
-comps/
-.id_list
+images/[0-9]*/
+images/comps/
+images/.id_list
 *.gif
 *.json
-rename.sh

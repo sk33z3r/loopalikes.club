@@ -10,7 +10,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Loophead Lore</title>
+        <title>Loophead Origin Stories</title>
         <meta name="description" content="A fan-made site with origin stories for the Loopheads characters.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/main.css">
@@ -22,13 +22,13 @@
         <div id="container">
             <div id="about">
                 <p><small><i>Check out the official collection on OpenSea: <a href="https://opensea.io/collection/moody-brain-loopring"><b>Moody Brain by Loopring</b></a></i></small></p>
-                <p><big>Loophead Fan Fiction<big></p>
+                <p><big>Loophead Origin Stories<big></p>
             </div>
             <?php $count = 0; while ( $count < count($lore) ) { ?>
                 <div class="comp">
                     <div class="char">
                         <h2>#<?php echo $lore[$count]["id"] ?> : <?php echo $lore[$count]["name"] ?></h2>
-                        <img src="<?php echo $lore[$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $lore[$count]["id"] ?>" />
+                        <img src="images/<?php echo $lore[$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $lore[$count]["id"] ?>" />
                     </div>
                     <div class="lore">
                         <?php foreach ( $lore[$count]["lore"] as $p ) { ?>
