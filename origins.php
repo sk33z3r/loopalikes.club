@@ -45,7 +45,7 @@
                 <div class="comp">
                     <div class="char">
                         <h2>#<?php echo $lore[$count]["id"] ?> : <?php echo $lore[$count]["name"] ?></h2>
-                        <img src="images/<?php echo $lore[$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $lore[$count]["id"] ?>" />
+                        <img loading="lazy" src="images/<?php echo $lore[$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $lore[$count]["id"] ?>" />
                     </div>
                     <div class="lore">
                         <?php foreach ( $lore[$count]["lore"] as $p ) { ?>
