@@ -35,10 +35,10 @@
                     <a href="origins.php"><button>ORIGIN STORIES</button></a>
                 </div>
                 <div id="ext-nav">
-                    <a href="https://loopheadexplorer.io"><button>LOOPHEAD EXPLORER</button></a>
-                    <a href="https://loopheads.info"><button>LOOPHEADS.INFO</button></a>
-                    <a href="https://loopheads.world"><button>LOOPHEADS.WORLD</button></a>
-                    <a href="https://opensea.io/collection/moody-brain-loopring"><button>OPENSEA COLLECTION</button></a>
+                    <a target="_blank" href="https://loopheadexplorer.io"><button>LOOPHEAD EXPLORER</button></a>
+                    <a target="_blank" href="https://loopheads.info"><button>LOOPHEADS.INFO</button></a>
+                    <a target="_blank" href="https://loopheads.world"><button>LOOPHEADS.WORLD</button></a>
+                    <a target="_blank" href="https://opensea.io/collection/moody-brain-loopring"><button>OPENSEA COLLECTION</button></a>
                 </div>
             </div>
             <div class="text">
