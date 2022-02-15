@@ -1,5 +1,5 @@
 <?php
-    $json = file_get_contents("airdrop01.json");
+    $json = file_get_contents("json/airdrop01.json");
     $loopalikes = json_decode($json, true);
 ?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
