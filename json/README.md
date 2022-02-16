@@ -1,8 +1,10 @@
 # JSON Database
 
+For now these are simple static files, not tracked in the repo. This is so there is no code changes necessary to add or remove items. I'll most likely have MongoDB implemented before drop 2, so the files won't be used in the future any way; only the schema.
+
 ## Looplegangers
 
-The database structure is a simple array of needed items to display in the front end. Each airdrop will be placed in their own separate file (not tracked in the repo).
+The database structure is a simple array of needed items to display in the front end. Each airdrop will be placed in their own separate file for now.
 
 Each airdrop has two main categories: "valley" and "unique". The schema is below.
 
