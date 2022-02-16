@@ -21,12 +21,12 @@ p {
     margin: 10px 0;
 }
 
-a, a:visited, a:active {
+a, a:visited, a:active, a:focus {
     text-decoration: none;
     color: #aaaaaa;
 }
 
-a:hover, a:focus {
+a:hover {
     text-decoration: none;
     color: #777777;
 }
@@ -194,11 +194,18 @@ button:hover {
     border-radius: 15px;
 }
 
+.label, .label:visited, .label:active, .label:focus {
+    background: #2d2f4b;
+}
+
+.label:hover {
+    background: #22243a;
+}
+
 .label {
     width: 250px;
     height: 250px;
     font-size: 24px;
-    background: #2d2f4b;
     border: 1px solid #FFFFFF;
     border-radius: 150px;
     text-align: center;

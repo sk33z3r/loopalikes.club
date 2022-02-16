@@ -60,10 +60,10 @@
                     <h2>Uncanny Valley Series</h2>
                     <?php $count = 0; while ( $count < count($loopalikes["valley"]) ) { ?>
                         <div class="comp">
-                        <div class="label">
+                        <a href="<?php echo $loopalikes["valley"][$count]["wiki"] ?>" target="_blank"><button class="label">
                             <p><big><?php echo $loopalikes["valley"][$count]["id_text"] ?></big></p>
                             <p><?php echo $loopalikes["valley"][$count]["name"] ?></p>
-                        </div>
+                        </button></a>
                         <img loading="lazy" src="images/<?php echo $loopalikes["valley"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["valley"][$count]["id"] ?>"/>
                         <img loading="lazy" src="images/comps/<?php echo $loopalikes["valley"][$count]["file"] ?>" alt="<?php echo $loopalikes["valley"][$count]["name"] ?>"/>
                     </div>
@@ -73,10 +73,10 @@
                     <h2>Unique Characters</h2>
                     <?php $count = 0; while ( $count < count($loopalikes["unique"]) ) { ?>
                         <div class="comp">
-                        <div class="label">
+                        <a href="<?php echo $loopalikes["unique"][$count]["wiki"] ?>" target="_blank"><button class="label">
                             <p><big>#<?php echo $loopalikes["unique"][$count]["id"] ?></big></p>
                             <p><?php echo $loopalikes["unique"][$count]["name"] ?></p>
-                        </div>
+                        </button></a>
                         <img loading="lazy" src="images/<?php echo $loopalikes["unique"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["unique"][$count]["id"] ?>"/>
                         <img loading="lazy" src="images/comps/<?php echo $loopalikes["unique"][$count]["file"] ?>" alt="<?php echo $loopalikes["unique"][$count]["name"] ?>"/>
                     </div>

@@ -11,12 +11,14 @@ Each airdrop has two main categories: "valley" and "unique". The schema is below
     "valley": [
         {
             "name": "Chuck Norris",
+            "wiki": "https://en.wikipedia.org/wiki/Chuck_Norris",
             "id_text": "X01/1001",
             "id": "1001",
             "file": "norris.png"
         },
         {
             "name": "Bill Clinton",
+            "wiki": "https://en.wikipedia.org/wiki/Bill_Clinton",
             "id_text": "X05/1005",
             "id": "1005",
             "file": "clinton.png"
@@ -25,11 +27,13 @@ Each airdrop has two main categories: "valley" and "unique". The schema is below
     "unique": [
         {
             "name": "Skeletor",
+            "wiki": "https://he-man.fandom.com/wiki/Skeletor",
             "id": "110",
             "file": "skeletor.png"
         },
         {
             "name": "Dr. Gero",
+            "wiki": "https://dragonball.fandom.com/wiki/Dr._Gero",
             "id": "143",
             "file": "gero.png"
         }
