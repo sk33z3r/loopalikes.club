@@ -1,3 +1,4 @@
+/* Unifont: https://unifoundry.com/unifont/index.html */
 @font-face {
     font-family: 'Unifont';
     src:  url('fonts/Unifont.woff') format('woff'),
@@ -241,6 +242,10 @@ button:hover {
     align-items: center;
     align-content: center;
     justify-content: center;
+}
+
+.char img {
+    border: 5px solid #FFFFFF;
 }
 
 @media (max-width: 1100px) {
