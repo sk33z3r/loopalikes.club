@@ -18,6 +18,12 @@ body {
     text-align: center;
 }
 
+footer {
+    width: 300px;
+    margin: 10px auto;
+    font-size: 14px;
+}
+
 p {
     margin: 10px 0;
 }
@@ -191,6 +197,7 @@ hr {
 }
 
 .showcase {
+    margin: 25px 0;
     display: flex;
     flex-direction: row;
     align-items: center;
