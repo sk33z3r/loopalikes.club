@@ -11,7 +11,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Loophead Showcase</title>
-        <meta name="description" content="A fan-made site with origin stories for the Loopheads characters.">
+        <meta name="description" content="A showcase of characters from the Loopheads collection.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/main.css">
         <link rel="preload" href="css/fonts/Unifont.woff" as="font" type="font/woff" crossorigin>
