@@ -190,7 +190,7 @@ hr {
     border-radius: 150px;
 }
 
-#showcase {
+.showcase {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -200,7 +200,7 @@ hr {
     width: 1000px;
 }
 
-#showcase img {
+.showcase img {
     margin: 0;
     width: 200px;
     height: 200px;
@@ -434,11 +434,11 @@ hr {
         display: none;
     }
 
-    #showcase {
+    .showcase {
         width: 100%;
     }
 
-    #showcase img {
+    .showcase img {
         width: 100px;
         height: 100px;
         border: 2px solid #FFFFFF;
