@@ -57,12 +57,17 @@
                 <hr noshade>
             </div>
             <div id="showcase">
-                <?php $num = 1; while ( $num <= 100 ) { $id = $num + 100; ?>
-                    <div class="showcase-img">
-                        <img loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $id ?>" />
-                        <div class="img-id">#<?php echo $id ?></div>
-                    </div>
-                <?php $num++; } ?>
+                <?php
+                    $num = 1;
+                    while ( $num <= 100 ) {
+                        $set = rand(1,9) * 100;
+                        $id = $num + $set; ?>
+                        <div class="showcase-img">
+                            <img loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $id ?>" />
+                            <div class="img-id">#<?php echo $id ?></div>
+                        </div>
+                    <?php $num++;
+                } ?>
             </div>
         </div>
     </body>
