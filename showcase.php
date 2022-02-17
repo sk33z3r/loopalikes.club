@@ -54,10 +54,14 @@
             </div>
             <div id="about">
                 <p><big>Loophead Airdrop Showcase<big></p>
+                <hr noshade>
             </div>
             <div id="showcase">
                 <?php $num = 1; while ( $num <= 100 ) { $id = $num + 100; ?>
-                    <img loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $id ?>" />
+                    <div class="showcase-img">
+                        <img loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $id ?>" />
+                        <div class="img-id">#<?php echo $id ?></div>
+                    </div>
                 <?php $num++; } ?>
             </div>
         </div>

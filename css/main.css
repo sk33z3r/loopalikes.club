@@ -85,6 +85,7 @@ button:hover {
 }
 
 #simple-nav, #ext-nav {
+    margin: 0;
     display: block;
 }
 
@@ -156,7 +157,7 @@ button:hover {
     margin: 10px 0;
 }
 
-.text hr {
+hr {
     width: 1000px;
 }
 
@@ -205,6 +206,23 @@ button:hover {
     height: 200px;
     border: 5px solid #FFFFFF;
     border-radius: 0;
+}
+
+.showcase-img {
+    padding: 0;
+    margin: -2px 0;
+    position: relative;
+}
+
+.img-id {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: #FFFFFF;
+    font-size: 25px;
+    mix-blend-mode: difference;
 }
 
 .category h2 {
@@ -326,7 +344,7 @@ button:hover {
         font-size: 14px;
     }
 
-    .text hr {
+    hr {
         width: 95%;
     }
 
@@ -424,6 +442,12 @@ button:hover {
         width: 100px;
         height: 100px;
         border: 2px solid #FFFFFF;
+    }
+
+    .img-id {
+        top: 1px;
+        right: 5px;
+        font-size: 16px;
     }
 
 }
