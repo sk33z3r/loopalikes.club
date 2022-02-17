@@ -78,12 +78,12 @@ button:hover {
     flex-wrap: nowrap;
     align-items: center;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #nav button {
-    width: 125px;
-    height: 25px;
+    width: 105px;
+    height: 35px;
 }
 
 #nav p {
@@ -433,7 +433,7 @@ hr {
     }
 
     #nav button {
-        width: 100px;
+        width: 150px;
         font-size: 12px;
     }
 
