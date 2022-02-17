@@ -55,6 +55,11 @@ button:hover {
     background: #22243a;
 }
 
+.active, .active:visited, .active:active, .active:focus, .active:hover {
+    color: #161726;
+    background: #2d2f4b;
+}
+
 #about {
     padding: 10px;
     font-size: 26px;

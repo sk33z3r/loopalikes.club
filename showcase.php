@@ -1,4 +1,5 @@
 <?php
+    $page = "showcase";
     include "modules/header1.html";
     echo '<title>Loophead Showcase</title>';
     echo '<meta name="description" content="A showcase of characters from the Loopheads collection.">';
@@ -6,7 +7,7 @@
 ?>
 
 <div id="container">
-    <?php include "modules/nav.html"; ?>
+    <?php include "modules/nav.php"; ?>
     <div id="about">
         <p><big>Loophead Airdrop Showcase<big></p>
         <hr noshade>
