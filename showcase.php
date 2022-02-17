@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+    $json = file_get_contents("json/lore.json");
+    $lore = json_decode($json, true);
+?><!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -7,8 +10,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Loopalike Club</title>
-        <meta name="description" content="A fan-made site for all things Moody Brain by Loopring.">
+        <title>Loophead Showcase</title>
+        <meta name="description" content="A fan-made site with origin stories for the Loopheads characters.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/main.css">
         <link rel="preload" href="css/fonts/Unifont.woff" as="font" type="font/woff" crossorigin>
@@ -36,20 +39,26 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div id="container">
-            <div id="about">
-                <p><small><i>This is a fan-made site for all things Loopheads from the Moody Brain NFT Collection.</i></small></p>
-                <img src="images/smash_chaos_900x900.gif" alt="Loopheads Showcase" />
+            <div id ="nav">
+                <div id="simple-nav">
+                    <a href="index.html"><button>HOME</button></a>
+                    <a href="looplegangers.php"><button>LOOPLEGANGERS</button></a>
+                    <a href="origins.php"><button>ORIGIN STORIES</button></a>
+                </div>
+                <div id="ext-nav">
+                    <a target="_blank" href="https://loopheadexplorer.io"><button>LOOPHEAD EXPLORER</button></a>
+                    <a target="_blank" href="https://loopheads.info"><button>LOOPHEADS.INFO</button></a>
+                    <a target="_blank" href="https://loopheads.world"><button>LOOPHEADS.WORLD</button></a>
+                    <a target="_blank" href="https://opensea.io/collection/moody-brain-loopring"><button>OPENSEA</button></a>
+                </div>
             </div>
-            <div class="filters home">
-                <a target="_blank" href="https://loopheads.info"><button>LOOPHEADS.INFO</button></a>
-                <a target="_blank" href="https://loopheads.world"><button>LOOPHEADS.WORLD</button></a>
-                <a target="_blank" href="https://opensea.io/collection/moody-brain-loopring"><button>OPENSEA COLLECTION</button></a>
-                <a target="_blank" href="https://loopheadexplorer.io/"><button>LOOPHEADS EXPLORER</button></a>
-                <a href="/looplegangers.php"><button>LOOPLEGANGERS</button></a>
-                <a href="/origins.php"><button>ORIGIN STORIES</button></a>
-                <a href="/showcase.php"><button>SHOWCASE</button></a>
-                <!-- <a href="/info.html"><button>INFO LINKS</button></a> -->
-                <!-- <a href="/gifs.php"><button>GIF ANIMATIONS</button></a> -->
+            <div id="about">
+                <p><big>Loophead Airdrop Showcase<big></p>
+            </div>
+            <div id="showcase">
+                <?php $num = 1; while ( $num <= 100 ) { $id = $num + 100; ?>
+                    <img loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $id ?>" />
+                <?php $num++; } ?>
             </div>
         </div>
     </body>

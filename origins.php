@@ -43,12 +43,13 @@
                 <div id="simple-nav">
                     <a href="index.html"><button>HOME</button></a>
                     <a href="looplegangers.php"><button>LOOPLEGANGERS</button></a>
+                    <a href="showcase.php"><button>SHOWCASE</button></a>
                 </div>
                 <div id="ext-nav">
                     <a target="_blank" href="https://loopheadexplorer.io"><button>LOOPHEAD EXPLORER</button></a>
                     <a target="_blank" href="https://loopheads.info"><button>LOOPHEADS.INFO</button></a>
                     <a target="_blank" href="https://loopheads.world"><button>LOOPHEADS.WORLD</button></a>
-                    <a target="_blank" href="https://opensea.io/collection/moody-brain-loopring"><button>OPENSEA COLLECTION</button></a>
+                    <a target="_blank" href="https://opensea.io/collection/moody-brain-loopring"><button>OPENSEA</button></a>
                 </div>
             </div>
             <div id="about">
