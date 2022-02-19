@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+
+  nginx:
+    container_name: "loopalikes.nginx"
+    image: nginx:alpine
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./:/var/www/html:ro
+    networks:
+      blackrook:
+        ipv4_address: 172.100.0.100
+
+  php:
+    container_name: "loopalikes.php"
+    image: php:fpm-alpine
+    volumes:
+      - ./:/var/www/html:ro
+    networks:
+      blackrook:
+        ipv4_address: 172.100.0.105
+
+networks:
+  blackrook:
+    name: blackrook
+    ipam:
+      config:
+        - subnet: 172.100.0.0/24
