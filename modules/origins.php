@@ -5,10 +5,10 @@
     if ($type === "body") {
         $json = file_get_contents("json/lore.json");
         $lore = json_decode($json, true);
+        include "modules/nav.php";
 ?>
 
 <div id="container">
-    <?php include "modules/nav.php"; ?>
     <div id="about">
         <p><big>Loophead Origin Stories<big></p>
     </div>

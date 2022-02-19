@@ -2,10 +2,10 @@
     <title>Loophead Showcase</title>
     <meta name="description" content="A showcase of characters from the Loopheads collection.">
 <?php }
-    if ($type === "body") { ?>
+    if ($type === "body") {
+        include "modules/nav.php"; ?>
 
 <div id="container">
-    <?php include "modules/nav.php"; ?>
     <div id="about">
         <p><big>Loophead Airdrop Showcase<big></p>
         <hr noshade>

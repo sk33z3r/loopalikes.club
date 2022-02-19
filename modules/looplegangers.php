@@ -5,10 +5,10 @@
     if ($type === "body") {
         $json = file_get_contents("json/airdrop01.json");
         $loopalikes = json_decode($json, true);
+        include "modules/nav.php";
 ?>
 
 <div id="container">
-    <?php include "modules/nav.php"; ?>
     <div class="text">
         <h1>Looplegangers</h1>
         <h3>A list of loopalikes the community has noticed between Loopheads and pop-culture.</h3>
