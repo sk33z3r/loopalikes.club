@@ -16,7 +16,7 @@ services:
 
   php:
     container_name: "loopalikes.php"
-    image: php:fpm-alpine
+    build: .
     volumes:
       - ./:/var/www/html:ro
     networks:
