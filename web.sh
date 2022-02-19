@@ -2,6 +2,7 @@
 
 case $1 in
     down) docker-compose down;;
-    up) docker-compose up -d;;
-    *) echo "Invalid command: $0 [up|down]"; exit 1;;
+    local) docker-compose up -d;;
+    server) docker-compose up -d mongo;;
+    *) echo "Invalid command: $0 [down|local|server]"; exit 1;;
 esac
