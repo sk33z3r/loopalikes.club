@@ -5,6 +5,7 @@
 <?php }
     if ($type === "body") {
         $password = $_POST["password"];
+        $sanitized_pw = filter_var($password, FILTER_SANITIZE_STRING);
         include ".env.php";
         include "modules/nav.php";
         echo "<h1>Loopalikes Admin</h1>";
@@ -17,14 +18,14 @@
                 </div>
             </div>
         <?php }
-        else if ($password !== $ADMIN_PASS) { ?>
+        else if ($sanitized_pw !== $ADMIN_PASS) { ?>
             <div id="container">
                 <div id="login">
                     <span class="fail">ACCESS DENIED!</span>
                 </div>
             </div>
         <?php }
-        else if ($password === $ADMIN_PASS) { ?>
+        else if ($sanitized_pw === $ADMIN_PASS) { ?>
             <div id="container">
                 <div id="admin">
                     <b>SUCCESS!</b>
