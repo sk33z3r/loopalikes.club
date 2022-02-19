@@ -55,6 +55,16 @@ button:hover {
     background: #22243a;
 }
 
+input {
+    background: #161726;
+    color: #FFFFFF;
+    border: 2px solid #000000;
+    padding: 2px;
+    font-size: 14px;
+    border-radius: 35px;
+    height: 26px;
+}
+
 .active, .active:visited, .active:active, .active:focus, .active:hover {
     color: #161726;
     background: #2d2f4b;
@@ -77,7 +87,7 @@ button:hover {
 
 #nav {
     width: 1000px;
-    margin: 15px 0;
+    margin: 15px auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -110,6 +120,35 @@ button:hover {
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
+}
+
+#login, #admin {
+    width: 1000px;
+    margin: 25px auto;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+#login form {
+    flex-direction: row;
+}
+
+#login button {
+    width: 100px;
+    height: 35px;
+}
+
+#admin {
+}
+
+.fail {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #CC0000;
 }
 
 .drop {
