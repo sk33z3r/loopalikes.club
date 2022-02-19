@@ -1,10 +1,8 @@
-<?php
-    $page = "showcase";
-    include "modules/header1.html";
-    echo '<title>Loophead Showcase</title>';
-    echo '<meta name="description" content="A showcase of characters from the Loopheads collection.">';
-    include "modules/header2.html";
-?>
+<?php if ($type === "head") { ?>
+    <title>Loophead Showcase</title>
+    <meta name="description" content="A showcase of characters from the Loopheads collection.">
+<?php }
+    if ($type === "body") { ?>
 
 <div id="container">
     <?php include "modules/nav.php"; ?>
@@ -40,6 +38,4 @@
     </div>
 </div>
 
-<?php
-    include "modules/footer.html";
-?>
+<?php } ?>

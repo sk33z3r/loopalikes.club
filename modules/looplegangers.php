@@ -1,11 +1,10 @@
-<?php
-    $page = "looplegangers";
-    $json = file_get_contents("json/airdrop01.json");
-    $loopalikes = json_decode($json, true);
-    include "modules/header1.html";
-    echo '<title>Looplegangers</title>';
-    echo '<meta name="description" content="A collection of loopalikes the community has noticed between the Loopheads and pop-culture.">';
-    include "modules/header2.html";
+<?php if ($type === "head") { ?>
+    <title>Looplegangers</title>
+    <meta name="description" content="A collection of loopalikes the community has noticed between the Loopheads and pop-culture.">
+<?php }
+    if ($type === "body") {
+        $json = file_get_contents("json/airdrop01.json");
+        $loopalikes = json_decode($json, true);
 ?>
 
 <div id="container">
@@ -54,6 +53,4 @@
     </div>
 </div>
 
-<?php
-    include "modules/footer.html";
-?>
+<?php } ?>

@@ -1,11 +1,10 @@
-<?php
-    $page = "origins";
-    $json = file_get_contents("json/lore.json");
-    $lore = json_decode($json, true);
-    include "modules/header1.html";
-    echo '<title>Loophead Origin Stories</title>';
-    echo '<meta name="description" content="A collection of origin stories for the Loopheads characters.">';
-    include "modules/header2.html";
+<?php if ($type === "head") { ?>
+    <title>Loophead Origin Stories</title>
+    <meta name="description" content="A collection of origin stories for the Loopheads characters.">
+<?php }
+    if ($type === "body") {
+        $json = file_get_contents("json/lore.json");
+        $lore = json_decode($json, true);
 ?>
 
 <div id="container">
@@ -29,6 +28,4 @@
     <?php $count++; } ?>
 </div>
 
-<?php
-    include "modules/footer.html";
-?>
+<?php } ?>
