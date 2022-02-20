@@ -7,7 +7,7 @@
     <div id="container">
         <div id="about">
             <p><small><i>This is a fan-made site for all things Loopheads from the Moody Brain NFT Collection.</i></small></p>
-            <img src="images/smash_chaos_900x900.gif" alt="Loopheads Showcase" />
+            <img src="images/home_showcase.gif" alt="Loopheads Showcase" />
         </div>
         <div class="filters home">
             <a target="_blank" href="https://loopheads.info"><button>LOOPHEADS.INFO</button></a>
