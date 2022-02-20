@@ -10,7 +10,9 @@
 
 <div id="container">
     <div id="about">
-        <p><big>Loophead Origin Stories<big></p>
+        <p><big>Loophead Origin Stories</big></p>
+        <p><small>A collection of origin stories for the Loopheads characters.</small></p>
+        <hr noshade>
     </div>
     <?php $count = 0; while ( $count < count($lore) ) { ?>
         <div class="comp">

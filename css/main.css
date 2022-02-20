@@ -24,10 +24,6 @@ footer {
     font-size: 14px;
 }
 
-p {
-    margin: 10px 0;
-}
-
 a, a:visited, a:active, a:focus {
     text-decoration: none;
     color: #aaaaaa;
@@ -42,7 +38,6 @@ button {
     font-family: 'Unifont', sans-serif;
     border-radius: 15px;
     border: 1px solid #0d0e16;
-    margin: 5px;
 }
 
 button, button:visited, button:active, button:focus {
@@ -65,8 +60,13 @@ input {
     height: 26px;
 }
 
+h3 {
+    font-size: 25px;
+    margin: 10px 0;
+}
+
 .active, .active:visited, .active:active, .active:focus, .active:hover {
-    color: #161726;
+    color: #FFFFFF;
     background: #2d2f4b;
 }
 
@@ -85,20 +85,33 @@ input {
     font-size: 45px;
 }
 
+#about small {
+    font-size: 20px;
+}
+
+#about p {
+    margin: 0;
+}
+
 #nav {
-    width: 1000px;
-    margin: 15px auto;
+    width: 1100px;
+    height: 65px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    background: #161726;
 }
 
 #nav button {
-    width: 105px;
-    height: 35px;
+    width: 110px;
+    height: 65px;
+    border-radius: 0;
+    border: none;
+    margin: 0;
 }
 
 #nav p {
@@ -107,7 +120,7 @@ input {
 
 #simple-nav, #ext-nav {
     margin: 0;
-    display: block;
+    display: flex;
 }
 
 #container {
@@ -200,10 +213,6 @@ input {
     justify-content: space-evenly;
 }
 
-.text h3, .text h1 {
-    margin: 10px 0;
-}
-
 hr {
     width: 1000px;
 }
@@ -211,6 +220,10 @@ hr {
 .home {
     margin-bottom: 50px;
     flex-wrap: wrap;
+}
+
+.home button {
+    margin: 5px;
 }
 
 .comp {
@@ -338,10 +351,6 @@ hr {
         font-size: 12px;
     }
 
-    p {
-        margin: 5px 0;
-    }
-
     #about {
         padding: 10px;
         font-size: 14px;
@@ -350,6 +359,14 @@ hr {
     #about img {
         height: 350px;
         width: 350px;
+    }
+
+    #about big {
+        font-size: 25px;
+    }
+
+    #about small {
+        font-size: 12px;
     }
 
     #container {
@@ -395,13 +412,8 @@ hr {
         width: 95%;
     }
 
-    .text h1 {
+    h3 {
         font-size: 20px;
-    }
-
-    .text h3 {
-        font-size: 12px;
-        padding: 0 5px;
     }
 
     .label {
@@ -457,22 +469,15 @@ hr {
         margin-bottom: 15px;
     }
 
-    #about big {
-        font-size: 28px;
-    }
-
-    #about small {
-        font-size: 15px;
-    }
-
     #nav {
         width: 100%;
-        margin: 10px 0;
-        justify-content: space-evenly;
+        height: 100%;
+        margin: 0;
     }
 
     #nav button {
-        width: 150px;
+        width: 100px;
+        height: 35px;
         font-size: 12px;
     }
 

@@ -9,11 +9,9 @@
 ?>
 
 <div id="container">
-    <div class="text">
-        <h1>Looplegangers</h1>
-        <h3>A list of loopalikes the community has noticed between Loopheads and pop-culture.</h3>
-    </div>
-    <div class="text">
+    <div id="about">
+        <p><big>Looplegangers</big></p>
+        <p><small>A collection of loopalikes the community has noticed between the Loopheads and pop-culture.</small></p>
         <hr noshade>
     </div>
     <div class="drop-btn">
@@ -28,26 +26,26 @@
             <h2>Uncanny Valley Series</h2>
             <?php $count = 0; while ( $count < count($loopalikes["valley"]) ) { ?>
                 <div class="comp">
-                <a href="<?php echo $loopalikes["valley"][$count]["wiki"] ?>" target="_blank"><button class="label">
-                    <p><big><?php echo $loopalikes["valley"][$count]["id_text"] ?></big></p>
-                    <p><?php echo $loopalikes["valley"][$count]["name"] ?></p>
-                </button></a>
-                <img loading="lazy" src="images/<?php echo $loopalikes["valley"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["valley"][$count]["id"] ?>"/>
-                <img loading="lazy" src="images/comps/<?php echo $loopalikes["valley"][$count]["file"] ?>" alt="<?php echo $loopalikes["valley"][$count]["name"] ?>"/>
-            </div>
+                    <a href="<?php echo $loopalikes["valley"][$count]["wiki"] ?>" target="_blank"><button class="label">
+                        <p><big><?php echo $loopalikes["valley"][$count]["id_text"] ?></big></p>
+                        <p><?php echo $loopalikes["valley"][$count]["name"] ?></p>
+                    </button></a>
+                    <img loading="lazy" src="images/<?php echo $loopalikes["valley"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["valley"][$count]["id"] ?>"/>
+                    <img loading="lazy" src="images/comps/<?php echo $loopalikes["valley"][$count]["file"] ?>" alt="<?php echo $loopalikes["valley"][$count]["name"] ?>"/>
+                </div>
             <?php $count++; } ?>
         </div>
         <div class="category" id="drop1-unique">
             <h2>Unique Characters</h2>
             <?php $count = 0; while ( $count < count($loopalikes["unique"]) ) { ?>
                 <div class="comp">
-                <a href="<?php echo $loopalikes["unique"][$count]["wiki"] ?>" target="_blank"><button class="label">
-                    <p><big>#<?php echo $loopalikes["unique"][$count]["id"] ?></big></p>
-                    <p><?php echo $loopalikes["unique"][$count]["name"] ?></p>
-                </button></a>
-                <img loading="lazy" src="images/<?php echo $loopalikes["unique"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["unique"][$count]["id"] ?>"/>
-                <img loading="lazy" src="images/comps/<?php echo $loopalikes["unique"][$count]["file"] ?>" alt="<?php echo $loopalikes["unique"][$count]["name"] ?>"/>
-            </div>
+                    <a href="<?php echo $loopalikes["unique"][$count]["wiki"] ?>" target="_blank"><button class="label">
+                        <p><big>#<?php echo $loopalikes["unique"][$count]["id"] ?></big></p>
+                        <p><?php echo $loopalikes["unique"][$count]["name"] ?></p>
+                    </button></a>
+                    <img loading="lazy" src="images/<?php echo $loopalikes["unique"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["unique"][$count]["id"] ?>"/>
+                    <img loading="lazy" src="images/comps/<?php echo $loopalikes["unique"][$count]["file"] ?>" alt="<?php echo $loopalikes["unique"][$count]["name"] ?>"/>
+                </div>
             <?php $count++; } ?>
         </div>
     </div>
