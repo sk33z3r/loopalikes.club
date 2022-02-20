@@ -9,6 +9,7 @@ Initially I made a script that grabbed all the Loophead variation pictures from 
 Only a few small things:
 
 * Showcase of all the Loophead faces from each drop in one page.
+* Showcase of each face, with all 10 colors in a grouping.
 * Funny lookalikes between the Loopheads and characters known as "Looplegangers."
 * Origin stories that some members of the community have written for their Loopheads.
 * Guide page, with useful links to Reddit and Loopring official articles on what to do with the Loopheads and how they work.
@@ -17,5 +18,4 @@ Only a few small things:
 
 Give me ideas! I already plan on adding some of these:
 
-* Showcase of each face, with all 10 colors in a grouping.
 * Page of well laid out gifs for each loophead.
