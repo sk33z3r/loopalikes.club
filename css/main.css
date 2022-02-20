@@ -134,12 +134,13 @@ hr {
     margin: 0 auto;
     background: #22243a;
     height: 100%;
+    min-height: 800px;
     width: 1100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 /**************/
@@ -350,17 +351,26 @@ hr {
     border-radius: 15px;
 }
 
-/*************/
-/* HOME PAGE */
-/*************/
+/**************/
+/* LINKS PAGE */
+/**************/
 
-.home {
-    margin-bottom: 50px;
+.links {
+    margin: 25px 0 50px 0;
+    width: 1000px;
+    display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
 }
 
-.home button {
+.links button {
     margin: 5px;
+    width: 485px;
+    height: 50px;
+    font-size: 18px;
 }
 
 /***********/

@@ -54,6 +54,7 @@
     #container {
         margin: 0 auto;
         width: 100%;
+        min-height: 650px;
     }
 
     /****************/
@@ -178,6 +179,20 @@
 
     #ext-nav {
         display: none;
+    }
+
+    /**************/
+    /* LINKS PAGE */
+    /**************/
+
+    .links {
+        margin: 25px 0 50px 0;
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .links button {
+        width: 300px;
     }
 
 }

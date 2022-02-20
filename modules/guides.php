@@ -14,7 +14,7 @@
         <p><small>A collection of links and guides from the Loophead community.</small></p>
         <hr noshade>
     </div>
-    <div class="filters home">
+    <div class="links">
         <?php $count = 0; while ($count < count($guides) ) { ?>
             <a href="<?php echo $guides[$count]["url"] ?>" target="_blank"><button><?php echo $guides[$count]["title"] ?></button></a>
         <?php $count++; } ?>
