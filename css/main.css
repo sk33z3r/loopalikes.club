@@ -1,4 +1,4 @@
-/* Unifont: https://unifoundry.com/unifont/index.html */
+/* UNIFONT: https://unifoundry.com/unifont/index.html */
 @font-face {
     font-family: 'Unifont';
     src:  url('fonts/Unifont.woff') format('woff'),
@@ -8,6 +8,10 @@
     font-weight: normal;
     font-style: normal;
 }
+
+/*****************/
+/* GLOBAL STYLES */
+/*****************/
 
 body {
     background: #2d2f4b;
@@ -65,10 +69,42 @@ h3 {
     margin: 10px 0;
 }
 
+hr {
+    width: 1000px;
+}
+
+/******************/
+/* GLOBAL CLASSES */
+/******************/
+
 .active, .active:visited, .active:active, .active:focus, .active:hover {
     color: #FFFFFF;
     background: #2d2f4b;
 }
+
+.text {
+    margin: 0 auto;
+    width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.text ul {
+    text-align: left;
+    font-size: 25px;
+    list-style-type: circle;
+}
+
+.text li {
+    margin: 10px;
+}
+
+/**************/
+/* GLOBAL IDs */
+/**************/
 
 #about {
     margin-top: 15px;
@@ -93,6 +129,22 @@ h3 {
 #about p {
     margin: 0;
 }
+
+#container {
+    margin: 0 auto;
+    background: #22243a;
+    height: 100%;
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+/**************/
+/* NAVIGATION */
+/**************/
 
 #nav {
     width: 1100px;
@@ -129,17 +181,9 @@ h3 {
     justify-content: center;
 }
 
-#container {
-    margin: 0 auto;
-    background: #22243a;
-    height: 100%;
-    width: 1100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
-}
+/**************/
+/* ADMIN PAGE */
+/**************/
 
 #login, #admin {
     width: 1000px;
@@ -165,6 +209,36 @@ h3 {
     margin: 15px 0;
     font-size: 14px;
     color: #CC0000;
+}
+
+/****************/
+/* FILTER PAGES */
+/****************/
+
+.label, .label:visited, .label:active, .label:focus {
+    background: #2d2f4b;
+}
+
+.label:hover {
+    background: #22243a;
+}
+
+.label {
+    width: 250px;
+    height: 250px;
+    font-size: 24px;
+    border: 1px solid #FFFFFF;
+    border-radius: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.label p {
+    font-size: 24px;
+    margin: 10px 0;
 }
 
 .drop {
@@ -207,39 +281,6 @@ h3 {
     width: 1000px;
     height: 60px;
     font-size: 36px;
-}
-
-.text {
-    margin: 0 auto;
-    width: 1000px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
-}
-
-.text ul {
-    text-align: left;
-    font-size: 25px;
-    list-style-type: circle;
-}
-
-.text li {
-    margin: 10px;
-}
-
-hr {
-    width: 1000px;
-}
-
-.home {
-    margin-bottom: 50px;
-    flex-wrap: wrap;
-}
-
-.home button {
-    margin: 5px;
 }
 
 .comp {
@@ -309,30 +350,22 @@ hr {
     border-radius: 15px;
 }
 
-.label, .label:visited, .label:active, .label:focus {
-    background: #2d2f4b;
+/*************/
+/* HOME PAGE */
+/*************/
+
+.home {
+    margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 
-.label:hover {
-    background: #22243a;
+.home button {
+    margin: 5px;
 }
 
-.label {
-    width: 250px;
-    height: 250px;
-    font-size: 24px;
-    border: 1px solid #FFFFFF;
-    border-radius: 150px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-}
-
-.label p {
-    font-size: 24px;
-}
+/***********/
+/* ORIGINS */
+/***********/
 
 .lore {
     display: flex;
@@ -359,164 +392,4 @@ hr {
 
 .char img {
     border: 5px solid #FFFFFF;
-}
-
-@media (max-width: 1100px) {
-
-    body {
-        font-size: 12px;
-    }
-
-    #about {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    #about img {
-        height: 350px;
-        width: 350px;
-    }
-
-    #about big {
-        font-size: 25px;
-    }
-
-    #about small {
-        font-size: 12px;
-    }
-
-    #container {
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    .drop {
-        width: 95%;
-    }
-
-    .comp {
-        margin: 10px auto;
-        width: 95%;
-        flex-wrap: wrap;
-        margin-bottom: 50px;
-    }
-
-    .comp img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .category h2 {
-        margin: 15px auto;
-        width: 92%;
-        padding: 5px;
-        border-radius: 10px;
-    }
-
-    .text {
-        width: 95%;
-        flex-direction: column;
-    }
-
-    .text ul {
-        font-size: 18px;
-    }
-
-    hr {
-        width: 95%;
-    }
-
-    h3 {
-        font-size: 20px;
-    }
-
-    .label {
-        margin: 0 0 15px 0;
-        width: 100%;
-        height: 60px;
-        flex-direction: row;
-        align-content: space-between;
-        justify-content: space-between;
-    }
-
-    .label p {
-        font-size: 20px;
-    }
-
-    .filters {
-        width: 95%;
-    }
-
-    .filters button {
-        width: 160px;
-        height: 50px;
-        font-size: 14px;
-    }
-
-    .drop-btn {
-        margin: 25px 0;
-        width: 95%;
-    }
-
-    .drop-btn button {
-        width: 95%;
-        height: 75px;
-        font-size: 24px;
-    }
-
-    .lore {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-    }
-
-    .lore p {
-        text-align: left;
-        font-size: 13px;
-        width: 95%;
-    }
-
-    .char {
-        width: 95%;
-        margin-bottom: 15px;
-    }
-
-    #nav {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-    }
-
-    #nav button {
-        width: 100px;
-        height: 35px;
-        font-size: 12px;
-    }
-
-    #simple-nav {
-        flex-wrap: wrap;
-    }
-
-    #ext-nav {
-        display: none;
-    }
-
-    .showcase {
-        width: 100%;
-    }
-
-    .showcase img {
-        width: 100px;
-        height: 100px;
-        border: 2px solid #FFFFFF;
-    }
-
-    .img-id {
-        top: 1px;
-        right: 5px;
-        font-size: 16px;
-    }
-
 }

@@ -1,0 +1,183 @@
+@media (max-width: 1100px) {
+
+    /*****************/
+    /* GLOBAL STYLES */
+    /*****************/
+
+    body {
+        font-size: 12px;
+    }
+
+    hr {
+        width: 95%;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    /******************/
+    /* GLOBAL CLASSES */
+    /******************/
+
+    .text {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .text ul {
+        font-size: 18px;
+    }
+
+    /**************/
+    /* GLOBAL IDs */
+    /**************/
+
+    #about {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #about img {
+        height: 350px;
+        width: 350px;
+    }
+
+    #about big {
+        font-size: 25px;
+    }
+
+    #about small {
+        font-size: 12px;
+    }
+
+    #container {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /****************/
+    /* FILTER PAGES */
+    /****************/
+
+    .drop {
+        width: 95%;
+    }
+
+    .comp {
+        margin: 10px auto;
+        width: 95%;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+    }
+
+    .comp img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .category h2 {
+        margin: 15px auto;
+        width: 92%;
+        padding: 5px;
+        border-radius: 10px;
+    }
+
+    .label {
+        margin: 0 0 15px 0;
+        width: 100%;
+        height: 60px;
+        flex-direction: row;
+        align-content: space-between;
+        justify-content: space-between;
+    }
+
+    .label p {
+        font-size: 20px;
+    }
+
+    .filters {
+        width: 95%;
+    }
+
+    .filters button {
+        width: 160px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .drop-btn {
+        margin: 25px 0;
+        width: 95%;
+    }
+
+    .drop-btn button {
+        width: 95%;
+        height: 75px;
+        font-size: 24px;
+    }
+
+    .showcase {
+        width: 100%;
+    }
+
+    .showcase img {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #FFFFFF;
+    }
+
+    .img-id {
+        top: 1px;
+        right: 5px;
+        font-size: 16px;
+    }
+
+    /***********/
+    /* ORIGINS */
+    /***********/
+
+    .lore {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .lore p {
+        text-align: left;
+        font-size: 13px;
+        width: 95%;
+    }
+
+    .char {
+        width: 95%;
+        margin-bottom: 15px;
+    }
+
+    /*******************/
+    /* NAVIGATION PAGE */
+    /*******************/
+
+    #nav {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+
+    #nav button {
+        width: 100px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    #simple-nav {
+        flex-wrap: wrap;
+    }
+
+    #ext-nav {
+        display: none;
+    }
+
+}
