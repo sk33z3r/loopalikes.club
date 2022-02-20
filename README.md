@@ -1,6 +1,6 @@
 # Loopalikes
 
-Initially I made a script that grabbed all the Loophead variation pictures from the first drop, and made animated gifs in various ways. Then the community in Discord started making connections between the Loopheads and random characters and celebrities. So, I took upon myself to make something fun for everyone to enjoy, instead of trying to dig through weeks worth of Discord chats to see what the community has come up with!
+Initially I made a script that grabbed all the Loophead variation pictures from the first drop, and made animated gifs in various ways. Then the community in Discord started making connections between the Loopheads and random characters and celebrities. So, I took it upon myself to make something fun for everyone to enjoy, instead of trying to dig through weeks worth of Discord chats to see what the community has come up with!
 
 [https://loopalikes.club](https://loopalikes.club)
 
