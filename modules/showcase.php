@@ -19,6 +19,14 @@
     </div>
 
     <div class="drop" id="drop1">
+        <h2>Unique Loopheads</h2>
+        <div class="showcase">
+            <div class="showcase-img">
+                <img loading="lazy" src="images/1050/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #1050" />
+                <div class="img-id">#1050</div>
+            </div>
+        </div>
+        <h2>Series Loopheads</h2>
         <div class="showcase">
             <?php
                 $num = 1;
@@ -39,7 +47,6 @@
                         <div class="modal-content">
                             <?php #print a div for each image
                                 $s = 0;
-                                $n = 1;
                                 while ($s < 1000) {
                                     $curID = $firstID + $s;
                                     if ($curID > 1091) {
@@ -52,14 +59,16 @@
                                         $curID = $curID + 9;
                                     } else if ($curID == 1011) {
                                         $curID = $curID + 5;
-                                    } ?>
-                                    <div class="column">
-                                        <div class="showcase-img">
-                                            <img loading="lazy" class="<?php echo $firstID ?>-demo" src="images/<?php echo $curID ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $curID ?>">
-                                            <div class="img-id">#<?php echo $curID ?></div>
+                                    }
+
+                                    if ($curID != 1050) { ?>
+                                        <div class="column">
+                                            <div class="showcase-img">
+                                                <img loading="lazy" class="<?php echo $firstID ?>-demo" src="images/<?php echo $curID ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $curID ?>">
+                                                <div class="img-id">#<?php echo $curID ?></div>
+                                            </div>
                                         </div>
-                                    </div>
-                            <?php $s = $s + 100; $n++; } ?>
+                            <?php } $s = $s + 100; } ?>
                         </div>
                     </div>
 
