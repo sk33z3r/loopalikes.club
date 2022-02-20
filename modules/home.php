@@ -17,7 +17,7 @@
             <a href="looplegangers"><button>LOOPLEGANGERS</button></a>
             <a href="origins"><button>ORIGIN STORIES</button></a>
             <a href="showcase"><button>SHOWCASE</button></a>
-            <!-- <a href="/info.html"><button>INFO LINKS</button></a> -->
+            <a href="guides"><button>INFO & GUIDES</button></a>
             <!-- <a href="/gifs.php"><button>GIF ANIMATIONS</button></a> -->
         </div>
     </div>

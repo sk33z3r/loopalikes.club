@@ -214,6 +214,16 @@ h3 {
     justify-content: space-evenly;
 }
 
+.text ul {
+    text-align: left;
+    font-size: 25px;
+    list-style-type: circle;
+}
+
+.text li {
+    margin: 10px;
+}
+
 hr {
     width: 1000px;
 }
@@ -403,10 +413,8 @@ hr {
         flex-direction: column;
     }
 
-    .text button {
-        width: 100px;
-        height: 50px;
-        font-size: 14px;
+    .text ul {
+        font-size: 18px;
     }
 
     hr {
