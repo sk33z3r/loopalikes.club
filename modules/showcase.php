@@ -1,5 +1,7 @@
 <?php if ($type === "head") { ?>
     <title>Loophead Showcase</title>
+    <link rel="stylesheet" href="css/lightbox.css">
+    <script type="text/javascript" src="js/lightbox.js"></script>
     <meta name="description" content="A showcase of characters from the Loopheads collection.">
 <?php }
     if ($type === "body") {
@@ -9,36 +11,59 @@
     <div id="about">
         <p><big>Loopheads Showcase</big></p>
         <p><small>A showcase of characters from the Loopheads collection.</small></p>
+        <p><small>Click on a Loophead to see all color variations for that series.</small></p>
         <hr noshade>
     </div>
     <div class="drop-btn">
         <button>Loopheads Airdrop No. 1: IDs #101 - #1100</button>
     </div>
+
     <div class="drop" id="drop1">
-        <h3>Sets 100 - 900</h3>
         <div class="showcase">
             <?php
                 $num = 1;
                 while ( $num <= 100 ) {
-                    $set = rand(1,9) * 100;
+                    $slide = rand(1,9);
+                    $set = $slide * 100;
+                    $firstID = $num + 100;
                     $id = $num + $set; ?>
                     <div class="showcase-img">
-                        <img loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $id ?>" />
+                        <img onclick="openModal('<?php echo $firstID ?>')" loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $id ?>" />
                         <div class="img-id">#<?php echo $id ?></div>
                     </div>
+
+                    <!-- The Modal/Lightbox -->
+                    <div id="<?php echo $firstID ?>" class="modal">
+                        <span class="close cursor" onclick="closeModal('<?php echo $firstID ?>')">&times;</span>
+                        <h2>X<?php if ($num != 100) { printf("%02d", $num); } else { echo "00"; } ?> Series Color Variations</h2>
+                        <div class="modal-content">
+                            <?php #print a div for each image
+                                $s = 0;
+                                $n = 1;
+                                while ($s < 1000) {
+                                    $curID = $firstID + $s;
+                                    if ($curID > 1091) {
+                                        $curID = $curID - 86;
+                                    } else if ($curID > 1014 or $curID == 1006) {
+                                        $curID = $curID + 9;
+                                    } else if ($curID > 1006 and $curID < 1011) {
+                                        $curID = $curID + 10;
+                                    } else if ($curID > 1011 and $curID < 1015) {
+                                        $curID = $curID + 9;
+                                    } else if ($curID == 1011) {
+                                        $curID = $curID + 5;
+                                    } ?>
+                                    <div class="column">
+                                        <div class="showcase-img">
+                                            <img loading="lazy" class="<?php echo $firstID ?>-demo" src="images/<?php echo $curID ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $curID ?>">
+                                            <div class="img-id">#<?php echo $curID ?></div>
+                                        </div>
+                                    </div>
+                            <?php $s = $s + 100; $n++; } ?>
+                        </div>
+                    </div>
+
                 <?php $num++;
-            } ?>
-        </div>
-        <h3>Set 1000</h3>
-        <div class="showcase">
-            <?php
-                $id = 1001;
-                while ( $id <= 1100 ) { ?>
-                    <div class="showcase-img">
-                        <img loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $id ?>" />
-                        <div class="img-id">#<?php echo $id ?></div>
-                    </div>
-                <?php $id++;
             } ?>
         </div>
     </div>
