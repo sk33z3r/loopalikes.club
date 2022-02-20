@@ -4,15 +4,17 @@
     <meta name="description" content="A page for doing things.">
 <?php }
     if ($type === "body") {
-        $password = $_POST["password"];
-        $sanitized_pw = filter_var($password, FILTER_SANITIZE_STRING);
+        if (!empty($_POST["password"])) {
+            $password = $_POST["password"];
+            $sanitized_pw = filter_var($password, FILTER_UNSAFE_RAW);
+        } else { $sanitized_pw = ""; }
         include ".env.php";
         include "modules/nav.php";
         echo "<h1>Loopalikes Admin</h1>";
-        if ($password == "") { ?>
+        if ($sanitized_pw == "") { ?>
             <div id="container">
                 <div id="login">
-                    <form method="post" action="index.php?page=admin">
+                    <form method="post" action="admin">
                         <b>PASSWORD: </b> <input type="password" name="password" /> <button type="submit">LOG IN</button>
                     </form>
                 </div>
