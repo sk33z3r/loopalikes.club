@@ -62,11 +62,9 @@
                                     }
 
                                     if ($curID != 1050) { ?>
-                                        <div class="column">
-                                            <div class="showcase-img">
-                                                <img loading="lazy" class="<?php echo $firstID ?>-demo" src="images/<?php echo $curID ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $curID ?>">
-                                                <div class="img-id">#<?php echo $curID ?></div>
-                                            </div>
+                                        <div class="showcase-img">
+                                            <img loading="lazy" class="<?php echo $firstID ?>-demo" src="images/<?php echo $curID ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $curID ?>">
+                                            <div class="img-id">#<?php echo $curID ?></div>
                                         </div>
                             <?php } $s = $s + 100; } ?>
                         </div>
