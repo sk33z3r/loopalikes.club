@@ -12,6 +12,7 @@
     <div id="about">
         <p><big>Looplegangers</big></p>
         <p><small>A collection of loopalikes the community has noticed between the Loopheads and pop-culture.</small></p>
+        <p><small>Click the ID/NAME to get more info on a pop-culture figure.</small></p>
         <hr noshade>
     </div>
     <div class="drop-btn">
