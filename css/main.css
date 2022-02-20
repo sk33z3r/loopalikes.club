@@ -122,6 +122,11 @@ h3 {
 #simple-nav, #ext-nav {
     margin: 0;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
 
 #container {
@@ -488,6 +493,10 @@ hr {
         width: 100px;
         height: 35px;
         font-size: 12px;
+    }
+
+    #simple-nav {
+        flex-wrap: wrap;
     }
 
     #ext-nav {
