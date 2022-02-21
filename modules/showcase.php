@@ -70,8 +70,7 @@
                         </div>
                     </div>
 
-                <?php $num++;
-            } ?>
+                <?php $num++; } ?>
         </div>
     </div>
 </div>
