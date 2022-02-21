@@ -14,7 +14,7 @@
             <a href="origins"><button>ORIGIN STORIES</button></a>
             <a href="showcase"><button>SHOWCASE</button></a>
             <a href="guides"><button>INFO & GUIDES</button></a>
-            <!-- <a href="gifs"><button>GIF ANIMATIONS</button></a> -->
+            <a href="gifs"><button>GIF ANIMATIONS</button></a>
             <a target="_blank" href="https://loopheadexplorer.io/"><button>LOOPHEADS EXPLORER</button></a>
             <a target="_blank" href="https://opensea.io/collection/moody-brain-loopring"><button>OPENSEA COLLECTION</button></a>
             <a target="_blank" href="https://loopheads.info"><button>LOOPHEADS.INFO</button></a>

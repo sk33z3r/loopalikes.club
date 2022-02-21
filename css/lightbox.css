@@ -3,7 +3,7 @@
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 100px;
+    padding-top: 15%;
     left: 0;
     top: 0;
     width: 100%;
@@ -13,8 +13,8 @@
 }
 
 .modal h2 {
-    margin: 35px;
-    font-size: 25px;
+    margin: 0 0 35px 0;
+    font-size: 30px;
 }
 
 /* Modal Content */
@@ -52,6 +52,11 @@
 
     .modal-content {
         width: 100%;
+    }
+
+    .modal h2 {
+        margin: 0 0 25px 0;
+        font-size: 22px;
     }
 
 }
