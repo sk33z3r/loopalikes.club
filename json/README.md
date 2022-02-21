@@ -64,3 +64,20 @@ The database structure holds as many lines of text as you want and some basics o
     }
 ]
 ```
+
+## Guides
+
+Simple structure to hold a title and a link. Schema is below.
+
+```json
+[
+    {
+        "title": "https://loopheads.info",
+        "url": "https://loopheads.info"
+    },
+    {
+        "title": "What Are Loopheads? A Comprehensive Guide",
+        "url": "https://reddit.com/r/loopringorg/comments/snvjhs/what_are_loopheads_a_comprehensive_guide/"
+    }
+]
+```
