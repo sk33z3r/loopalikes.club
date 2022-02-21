@@ -13,6 +13,7 @@ Initially I made a script that grabbed all the Loophead variation pictures from 
 * Funny lookalikes between the Loopheads and characters known as "Looplegangers."
 * Origin stories that some members of the community have written for their Loopheads.
 * Guide page, with useful links to Reddit and Loopring official articles on what to do with the Loopheads and how they work.
+* Page of well laid out gifs for each loophead.
 
 ### Hidden features
 
@@ -21,6 +22,4 @@ Initially I made a script that grabbed all the Loophead variation pictures from 
 
 ## What's Coming?
 
-Give me ideas! I already plan on adding these:
-
-* Page of well laid out gifs for each loophead.
+Give me ideas!
