@@ -319,19 +319,12 @@ hr {
     width: 1000px;
 }
 
-.showcase img {
+.img-border {
     margin: 0;
     width: 210px;
     height: 210px;
     border: 5px solid #FFFFFF;
     border-radius: 0;
-}
-
-.showcase button {
-    margin: 5px;
-    width: 75px;
-    height: 75px;
-    font-size: 20px;
 }
 
 .showcase-img {
@@ -378,6 +371,49 @@ hr {
     width: 485px;
     height: 50px;
     font-size: 18px;
+}
+
+/************/
+/* GIF PAGE */
+/************/
+
+.gif-btn {
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    display: flex;
+    align-items: flex-end;
+}
+
+.gif-btn img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border: none;
+    filter: grayscale(100%);
+}
+
+.gif-btn, .gif-btn:active, .gif-btn:visited {
+    opacity: 0.5;
+}
+
+.gif-btn img:hover {
+    filter: grayscale(0%);
+}
+
+.gif-btn:hover, .gif-btn:focus {
+    opacity: 1;
+}
+
+.gif-id {
+    padding: 0;
+    margin: 0;
+    width: 100px;
+    background: #22243a;
+    position: absolute;
+    color: #FFFFFF;
+    font-size: 20px;
 }
 
 /***********/

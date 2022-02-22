@@ -22,7 +22,7 @@
         <h2>Unique Loopheads</h2>
         <div class="showcase">
             <div class="showcase-img">
-                <img loading="lazy" src="images/1050/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #1050" />
+                <img class="img-border" loading="lazy" src="images/1050/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #1050" />
                 <div class="img-id">#1050</div>
             </div>
         </div>
@@ -36,7 +36,7 @@
                     $firstID = $num + 100;
                     $id = $num + $set; ?>
                     <div class="showcase-img">
-                        <img onclick="openModal('<?php echo $firstID ?>')" loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $id ?>" />
+                        <img class="img-border" onclick="openModal('<?php echo $firstID ?>')" loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $id ?>" />
                         <div class="img-id">#<?php echo $id ?></div>
                     </div>
 
@@ -63,7 +63,7 @@
 
                                     if ($curID != 1050) { ?>
                                         <div class="showcase-img">
-                                            <img loading="lazy" class="<?php echo $firstID ?>-demo" src="images/<?php echo $curID ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $curID ?>">
+                                            <img class="img-border" loading="lazy" class="<?php echo $firstID ?>-demo" src="images/<?php echo $curID ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $curID ?>">
                                             <div class="img-id">#<?php echo $curID ?></div>
                                         </div>
                             <?php } $s = $s + 100; } ?>

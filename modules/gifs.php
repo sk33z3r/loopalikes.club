@@ -11,7 +11,7 @@
     <div id="about">
         <p><big>Loopheads GIFs</big></p>
         <p><small>A showcase of gifs generated from Loophead variations.</small></p>
-        <p><small>Click on an ID to see all the gifs for that Loophead.</small></p>
+        <p><small>Click on a Loophead to see all its gifs.</small></p>
         <hr noshade>
     </div>
     <div class="drop-btn">
@@ -23,7 +23,10 @@
             <?php
                 $id = 101;
                 while ( $id <= 1100 ) { ?>
-                    <button onclick="openModal('<?php echo $id ?>')">#<?php echo $id ?></button>
+                    <div class="gif-btn" onclick="openModal('<?php echo $id ?>')">
+                        <img loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" />
+                        <div class="gif-id">#<?php echo $id ?></div>
+                    </div>
 
                     <!-- The Modal/Lightbox -->
                     <div id="<?php echo $id ?>" class="modal">
@@ -33,16 +36,10 @@
                             <?php #print a div for each image
                                 $bg = 0;
                                 while ($bg < 5) { ?>
-                                    <div class="showcase-img">
-                                        <img loading="lazy" src="images/<?php echo $id ?>/<?php echo $id ?>_<?php echo $bg ?>_throb_900x900.gif" alt="Loophead #<?php echo $id ?> BG <?php echo $bg ?>">
-                                    </div>
+                                    <img class="img-border" loading="lazy" src="images/<?php echo $id ?>/<?php echo $id ?>_<?php echo $bg ?>_throb_900x900.gif" alt="Loophead #<?php echo $id ?> BG <?php echo $bg ?>">
                             <?php $bg++; } ?>
-                            <div class="showcase-img">
-                                <img loading="lazy" src="images/<?php echo $id ?>/<?php echo $id ?>_random_900x900.gif" alt="Loophead #<?php echo $id ?> Random">
-                            </div>
-                            <div class="showcase-img">
-                                <img loading="lazy" src="images/<?php echo $id ?>/<?php echo $id ?>_showcase_900x900.gif" alt="Loophead #<?php echo $id ?> Showcase">
-                            </div>
+                            <img class="img-border" loading="lazy" src="images/<?php echo $id ?>/<?php echo $id ?>_random_900x900.gif" alt="Loophead #<?php echo $id ?> Random">
+                            <img class="img-border" loading="lazy" src="images/<?php echo $id ?>/<?php echo $id ?>_showcase_900x900.gif" alt="Loophead #<?php echo $id ?> Showcase">
                         </div>
                     </div>
 

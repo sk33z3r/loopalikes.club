@@ -122,7 +122,7 @@
         width: 100%;
     }
 
-    .showcase img {
+    .img-border {
         width: 125px;
         height: 125px;
         border: 2px solid #FFFFFF;
@@ -192,6 +192,27 @@
 
     .links button {
         width: 300px;
+    }
+
+    /************/
+    /* GIF PAGE */
+    /************/
+
+    .gif-btn {
+        margin: 5px;
+        width: 75px;
+        height: 75px;
+    }
+
+    .gif-btn img {
+        width: 75px;
+        height: 75px;
+        border-radius: 50px;
+    }
+
+    .gif-id {
+        width: 75px;
+        font-size: 16px;
     }
 
 }
