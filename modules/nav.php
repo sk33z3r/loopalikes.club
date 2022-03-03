@@ -8,7 +8,8 @@
         <a href="guides"><button <?php if ( $page === "guides" ) { echo 'class="active"'; } ?>>GUIDES</button></a>
     </div>
     <div id="ext-nav">
-        <a target="_blank" href="https://loopheadexplorer.io"><button>EXPLORER</button></a>
+        <!-- <a target="_blank" href="https://loopheadexplorer.io"><button>EXPLORER</button></a> -->
+        <a href="/loopheadexplorer"><button>EXPLORER</button></a>
         <a target="_blank" href="https://opensea.io/collection/moody-brain-loopring"><button>OPENSEA</button></a>
     </div>
 </div>
