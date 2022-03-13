@@ -7,3 +7,7 @@ function openModal(id) {
 function closeModal(id) {
     document.getElementById(id).style.display = "none";
 }
+
+// Load showcase GIF after page has loaded
+
+document.getElementById("showcase-gif").style.backgroundImage="url(/images/home_showcase.gif)";

@@ -1,7 +1,7 @@
 <?php if ($type === "head") { ?>
     <title>Loophead Showcase</title>
     <link rel="stylesheet" href="css/lightbox.css">
-    <script type="text/javascript" src="js/lightbox.js"></script>
+    <script type="text/javascript" src="js/lightbox.js" defer></script>
     <meta name="description" content="A showcase of characters from the Loopheads collection.">
 <?php }
     if ($type === "body") {

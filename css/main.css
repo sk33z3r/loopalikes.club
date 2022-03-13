@@ -102,6 +102,13 @@ hr {
     margin: 10px;
 }
 
+#showcase-gif {
+    margin: 15px auto;
+    height: 500px;
+    width: 500px;
+    background-image: none;
+}
+
 /**************/
 /* GLOBAL IDs */
 /**************/
@@ -110,12 +117,6 @@ hr {
     margin-top: 15px;
     padding: 10px;
     font-size: 26px;
-}
-
-#about img {
-    margin: 15px 0;
-    height: 500px;
-    width: 500px;
 }
 
 #about big {

@@ -1,5 +1,6 @@
 <?php
     if ($type === "head") { ?>
+    <script type="text/javascript" src="js/lightbox.js" defer></script>
     <title>Loopalike Club</title>
     <meta name="description" content="A fan-made site for all things Moody Brain by Loopring.">
 <?php }
@@ -7,7 +8,7 @@
     <div id="container">
         <div id="about">
             <p><small><i>This is a fan-made site for all things Loopheads from the Moody Brain NFT Collection.</i></small></p>
-            <img src="images/home_showcase.gif" alt="Loopheads Showcase" />
+            <div id="showcase-gif"></div>
         </div>
         <div class="links">
             <a href="looplegangers"><button>LOOPLEGANGERS</button></a>
