@@ -9,5 +9,4 @@ function closeModal(id) {
 }
 
 // Load showcase GIF after page has loaded
-await new Promise(r => setTimeout(r, 2000));
 document.getElementById("showcase-gif").style.backgroundImage="url(/images/home_showcase.gif)";
