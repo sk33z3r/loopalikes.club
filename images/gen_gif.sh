@@ -71,7 +71,7 @@ get_all() {
             ${curl}_4_2.png > ${orig}4-2.png &
             ${curl}_4_3.png > ${orig}4-3.png &
             ${curl}_4_4.png > ${orig}4-4.png
-            sleep 3
+            sleep 4
             echo "      Resizing to 900x900..."
             convert="-alpha remove -resize 900x900 $id/vars/"
             convert ${orig}0-0.png ${convert}0-0.png
@@ -149,7 +149,7 @@ get_one() {
     ${curl}_4_2.png > ${orig}4-2.png &
     ${curl}_4_3.png > ${orig}4-3.png &
     ${curl}_4_4.png > ${orig}4-4.png
-    sleep 3
+    sleep 4
     echo "    Resizing to 900x900..."
     convert="-alpha remove -resize 900x900 $id/vars/"
     convert ${orig}0-0.png ${convert}0-0.png
