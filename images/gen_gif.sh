@@ -16,10 +16,20 @@ ipfs_hashes[700]="QmPHyNZytFbbacsJ6TXpKyN8U4yjxS3nyfGWj7Tdtgz27L"
 ipfs_hashes[800]="QmP9agQTkvigpLTrgvS78TyxaKzZPuDjFaXCAViFBz1Kzb"
 ipfs_hashes[900]="QmdQ9PG8JWfB83b9BQ7v7AR5Ky1LsB9ubXrRuB8TEQJuLY"
 ipfs_hashes[1000]="QmQrH67hcexQ2copfQzEc1LUoEvakrmC2UCpTqi7TnbYEF"
+ipfs_hashes[1100]="QmQUNq35Tu86WdHhFJYbjBnDogQy7ZfBBr1MXaT45o6FXE"
+ipfs_hashes[1200]="QmezPQ9UUtkhFFeLiW6UD2KLS4FKMXneG3S4zzeFhFWcQv"
+ipfs_hashes[1300]="QmU29qN1fo4WeU2jsUNwRWs3UrPD4oYpkquWdnEzRhcitc"
+ipfs_hashes[1400]="QmcqSvqEB6nzHYSEhM8G3PuzkzWx2qBzE9TfRPs5JJM2AA"
+ipfs_hashes[1500]="QmVu8Kt6qqoeZ4kh9iydLR4A2xW1cdtNJ8akj2KYku5Jnd"
+ipfs_hashes[1600]="QmXXLFtpBnPBnnGnVXTYA71HxjjHe1EDkfE7GTibiHXF1x"
+ipfs_hashes[1700]="QmfLxCd4tXcHVke9oXRNWjiYHBeKdEN1MRVWVQ2tQAbLvZ"
+ipfs_hashes[1800]="Qmf2wE7afYakgFXSxoWVMyJsm2yMLecLt1cHCAm79QMTgw"
+ipfs_hashes[1900]="QmdzwxdJLYVaV6SRvqiHq7wAVPsyZv52c91goDDuhVJX5q"
+ipfs_hashes[2000]="QmWXQ6rGWPxMtuHUdHCgsWw1tT7vkhvbzxJPc3kmH3BXKR"
 
 get_all() {
-    set=100
-    while [ $set -lt 1100 ]; do
+    set=1100
+    while [ $set -lt 2100 ]; do
         if [ $set -eq 1000 ]; then
             num_map=("_index" 6 7 8 9 10 101 102 103 104 105 106 107 108 109 11 110 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95)
         else
@@ -176,8 +186,8 @@ get_list() {
 }
 
 make_all() {
-    set=100
-    while [ $set -lt 1100 ]; do
+    set=1100
+    while [ $set -lt 2100 ]; do
         num=1
         echo "  Making gifs from set $set..."
         while [ $num -lt 101 ]; do
