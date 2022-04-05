@@ -118,7 +118,11 @@ get_one() {
     echo "  Getting and resizing images for Loophead #$id..."
     num=$(echo ${id: -2} | sed 's/^0*//')
     if [ -z $num ]; then num=100; fi
-    set=$((id-num))
+    if [ $num -lt 1101 ]; then
+        set=$((id-num))
+    else
+        set=$((id-num-1000))
+    fi
     url_num=$(printf "%02d" ${num_map[$num]})
     mkdir -p $id/{original,vars}
     echo "    Downloading PNGs from IPFS..."
