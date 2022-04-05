@@ -118,7 +118,7 @@ get_one() {
     echo "  Getting and resizing images for Loophead #$id..."
     num=$(echo ${id: -2} | sed 's/^0*//')
     if [ -z $num ]; then num=100; fi
-    if [ $num -lt 1101 ]; then
+    if [ $num -gt 1100 ]; then
         set=$((id-num))
     else
         set=$((id-num-1000))
