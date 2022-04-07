@@ -446,3 +446,18 @@ hr {
 .char img {
     border: 5px solid #FFFFFF;
 }
+
+/***********/
+/*  DROPS  */
+/***********/
+
+#drop1 { display: none; }
+#drop2 { display: none; }
+#drop3 { display: none; }
+#drop4 { display: none; }
+#drop5 { display: none; }
+#drop6 { display: none; }
+#drop7 { display: none; }
+#drop8 { display: none; }
+#drop9 { display: none; }
+#drop10 { display: none; }

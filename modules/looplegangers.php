@@ -1,10 +1,13 @@
 <?php if ($type === "head") { ?>
     <title>Looplegangers</title>
     <meta name="description" content="A collection of loopalikes the community has noticed between the Loopheads and pop-culture.">
+    <script type="text/javascript" src="js/lightbox.js" defer></script>
 <?php }
     if ($type === "body") {
-        $json = file_get_contents("json/airdrop01.json");
-        $loopalikes = json_decode($json, true);
+        $drop1 = file_get_contents("json/airdrop01.json");
+        $airdrop01 = json_decode($drop1, true);
+        $drop2 = file_get_contents("json/airdrop02.json");
+        $airdrop02 = json_decode($drop2, true);
         include "modules/nav.php";
 ?>
 
@@ -15,7 +18,8 @@
         <p><small>Click the ID/NAME to get more info on a pop-culture figure.</small></p>
         <hr noshade>
     </div>
-    <div class="drop-btn">
+
+    <div class="drop-btn" onclick="drop(1)">
         <button>Loopheads Airdrop No. 1: IDs #101 - #1100</button>
     </div>
     <div class="drop" id="drop1">
@@ -25,31 +29,68 @@
         </div> -->
         <div class="category" id="drop1-valley">
             <h2>Uncanny Valley Series</h2>
-            <?php $count = 0; while ( $count < count($loopalikes["valley"]) ) { ?>
+            <?php $count = 0; while ( $count < count($airdrop01["valley"]) ) { ?>
                 <div class="comp">
-                    <a href="<?php echo $loopalikes["valley"][$count]["wiki"] ?>" target="_blank"><button class="label">
-                        <p><b><big><?php echo $loopalikes["valley"][$count]["id_text"] ?></big></b></p>
-                        <p><?php echo $loopalikes["valley"][$count]["name"] ?></p>
+                    <a href="<?php echo $airdrop01["valley"][$count]["wiki"] ?>" target="_blank"><button class="label">
+                        <p><b><big><?php echo $airdrop01["valley"][$count]["id_text"] ?></big></b></p>
+                        <p><?php echo $airdrop01["valley"][$count]["name"] ?></p>
                     </button></a>
-                    <img loading="lazy" src="images/<?php echo $loopalikes["valley"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["valley"][$count]["id"] ?>"/>
-                    <img loading="lazy" src="images/comps/<?php echo $loopalikes["valley"][$count]["file"] ?>" alt="<?php echo $loopalikes["valley"][$count]["name"] ?>"/>
+                    <img loading="lazy" src="images/<?php echo $airdrop01["valley"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $airdrop01["valley"][$count]["id"] ?>"/>
+                    <img loading="lazy" src="images/comps/<?php echo $airdrop01["valley"][$count]["file"] ?>" alt="<?php echo $airdrop01["valley"][$count]["name"] ?>"/>
                 </div>
             <?php $count++; } ?>
         </div>
         <div class="category" id="drop1-unique">
             <h2>Unique Characters</h2>
-            <?php $count = 0; while ( $count < count($loopalikes["unique"]) ) { ?>
+            <?php $count = 0; while ( $count < count($airdrop01["unique"]) ) { ?>
                 <div class="comp">
-                    <a href="<?php echo $loopalikes["unique"][$count]["wiki"] ?>" target="_blank"><button class="label">
-                        <p><b><big>#<?php echo $loopalikes["unique"][$count]["id"] ?></big></b></p>
-                        <p><?php echo $loopalikes["unique"][$count]["name"] ?></p>
+                    <a href="<?php echo $airdrop01["unique"][$count]["wiki"] ?>" target="_blank"><button class="label">
+                        <p><b><big>#<?php echo $airdrop01["unique"][$count]["id"] ?></big></b></p>
+                        <p><?php echo $airdrop01["unique"][$count]["name"] ?></p>
                     </button></a>
-                    <img loading="lazy" src="images/<?php echo $loopalikes["unique"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $loopalikes["unique"][$count]["id"] ?>"/>
-                    <img loading="lazy" src="images/comps/<?php echo $loopalikes["unique"][$count]["file"] ?>" alt="<?php echo $loopalikes["unique"][$count]["name"] ?>"/>
+                    <img loading="lazy" src="images/<?php echo $airdrop01["unique"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $airdrop01["unique"][$count]["id"] ?>"/>
+                    <img loading="lazy" src="images/comps/<?php echo $airdrop01["unique"][$count]["file"] ?>" alt="<?php echo $airdrop01["unique"][$count]["name"] ?>"/>
                 </div>
             <?php $count++; } ?>
         </div>
     </div>
+
+    <div class="drop-btn" onclick="drop(2)">
+        <button>Loopheads Airdrop No. 2: IDs #1101 - #2100</button>
+    </div>
+    <div class="drop" id="drop2">
+        <!-- <div class="filters">
+            <button>Uncanny Valley</button>
+            <button>Unique Characters</button>
+        </div> -->
+        <div class="category" id="drop2-valley">
+            <h2>Uncanny Valley Series</h2>
+            <?php $count = 0; while ( $count < count($airdrop02["valley"]) ) { ?>
+                <div class="comp">
+                    <a href="<?php echo $airdrop02["valley"][$count]["wiki"] ?>" target="_blank"><button class="label">
+                        <p><b><big><?php echo $airdrop02["valley"][$count]["id_text"] ?></big></b></p>
+                        <p><?php echo $airdrop02["valley"][$count]["name"] ?></p>
+                    </button></a>
+                    <img loading="lazy" src="images/<?php echo $airdrop02["valley"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $airdrop02["valley"][$count]["id"] ?>"/>
+                    <img loading="lazy" src="images/comps/<?php echo $airdrop02["valley"][$count]["file"] ?>" alt="<?php echo $airdrop02["valley"][$count]["name"] ?>"/>
+                </div>
+            <?php $count++; } ?>
+        </div>
+        <div class="category" id="drop2-unique">
+            <h2>Unique Characters</h2>
+            <?php $count = 0; while ( $count < count($airdrop02["unique"]) ) { ?>
+                <div class="comp">
+                    <a href="<?php echo $airdrop02["unique"][$count]["wiki"] ?>" target="_blank"><button class="label">
+                        <p><b><big>#<?php echo $airdrop02["unique"][$count]["id"] ?></big></b></p>
+                        <p><?php echo $airdrop02["unique"][$count]["name"] ?></p>
+                    </button></a>
+                    <img loading="lazy" src="images/<?php echo $airdrop02["unique"][$count]["id"] ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $airdrop02["unique"][$count]["id"] ?>"/>
+                    <img loading="lazy" src="images/comps/<?php echo $airdrop02["unique"][$count]["file"] ?>" alt="<?php echo $airdrop02["unique"][$count]["name"] ?>"/>
+                </div>
+            <?php $count++; } ?>
+        </div>
+    </div>
+
 </div>
 
 <?php } ?>
