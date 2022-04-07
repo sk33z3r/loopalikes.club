@@ -4,11 +4,11 @@
     <title>Loopalike Club</title>
     <meta name="description" content="A fan-made site for all things Moody Brain by Loopring.">
 <?php }
-    if ($type === "body") { ?>
+    if ($type === "body") { $randID = rand(101,2100); $randBG = rand(0,4); ?>
     <div id="container">
         <div id="about">
             <p><small><i>This is a fan-made site for all things Loopheads from the Moody Brain NFT Collection.</i></small></p>
-            <div id="showcase-gif"></div>
+            <img id="showcase-gif" src="images/<?php echo $randID ?>/<?php echo $randID ?>_<?php echo $randBG ?>_throb_900x900.gif" />
         </div>
         <div class="links">
             <a href="looplegangers"><button>LOOPLEGANGERS</button></a>
