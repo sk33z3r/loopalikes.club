@@ -77,13 +77,6 @@
     </div>
 
     <div class="drop" id="drop2">
-        <h2>Unique Loopheads</h2>
-        <div class="showcase">
-            <div class="showcase-img">
-                <img class="img-border" loading="lazy" src="images/1050/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #1050" />
-                <div class="img-id">#1050</div>
-            </div>
-        </div>
         <h2>Series Loopheads</h2>
         <div class="showcase">
             <?php $num = 1; while ( $num <= 100 ) {
