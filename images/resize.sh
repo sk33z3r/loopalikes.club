@@ -1,8 +1,10 @@
-#1/usr/bin/env bash
+#!/usr/bin/env bash
 
-i=$1
+s=$1
+e=$2
 
-while [ $i -lt 2101 ]; do
-    find $i/vars -type f -name "*.png" -exec convert "{}" -resize 250x250 "{}" \;
-    $((i++))
+while [ $s -lt $e ]; do
+    echo "Resizing #$s..."
+    find $s/vars -type f -name "*.png" -exec convert "{}" -resize 250x250 "{}" \;
+    ((s++))
 done
