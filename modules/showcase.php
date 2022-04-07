@@ -77,6 +77,13 @@
     </div>
 
     <div class="drop" id="drop2">
+        <h2>Unique Loopheads</h2>
+        <div class="showcase">
+            <div class="showcase-img">
+                <img class="img-border" loading="lazy" src="images/1693/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #1693" />
+                <div class="img-id">#1693</div>
+            </div>
+        </div>
         <h2>Series Loopheads</h2>
         <div class="showcase">
             <?php $num = 1; while ( $num <= 100 ) {
@@ -97,12 +104,13 @@
                         <?php #print a div for each image
                             $s = 0;
                             while ($s < 1000) {
-                                $curID = $firstID + $s; ?>
+                                $curID = $firstID + $s;
+                                if ($curID != 1693) { ?>
                                 <div class="showcase-img">
                                     <img class="img-border" loading="lazy" class="<?php echo $firstID ?>-demo" src="images/<?php echo $curID ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $curID ?>">
                                     <div class="img-id">#<?php echo $curID ?></div>
                                 </div>
-                        <?php $s = $s + 100; } ?>
+                        <?php } $s = $s + 100; } ?>
                     </div>
                 </div>
             <?php $num++; } ?>
