@@ -15,6 +15,17 @@
 .modal h2 {
     margin: 0 0 35px 0;
     font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.modal button {
+    margin: 0 20px;
+    text-align: center;
+    padding: 10px 15px;
 }
 
 /* Modal Content */

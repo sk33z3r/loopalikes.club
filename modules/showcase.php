@@ -42,7 +42,7 @@
                 <!-- The Modal/Lightbox -->
                 <div id="<?php echo $firstID ?>" class="modal">
                     <span class="close cursor" onclick="closeModal('<?php echo $firstID ?>')">&times;</span>
-                    <h2>X<?php if ($num != 100) { printf("%02d", $num); } else { echo "00"; } ?> Series Color Variations</h2>
+                    <h2><button onclick="prev(1, <?php echo $firstID ?>)">&lt;</button>X<?php if ($num != 100) { printf("%02d", $num); } else { echo "00"; } ?> Series Color Variations<button onclick="next(1, <?php echo $firstID ?>)">&gt;</button></h2>
                     <div class="modal-content">
                         <?php #print a div for each image
                             $s = 0;
@@ -92,7 +92,7 @@
                 <!-- The Modal/Lightbox -->
                 <div id="<?php echo $firstID ?>" class="modal">
                     <span class="close cursor" onclick="closeModal('<?php echo $firstID ?>')">&times;</span>
-                    <h2>XX<?php if ($num != 100) { printf("%02d", $num); } else { echo "00"; } ?> Series Color Variations</h2>
+                    <h2><button onclick="prev(2, <?php echo $firstID ?>)">&lt;</button>XX<?php if ($num != 100) { printf("%02d", $num); } else { echo "00"; } ?> Series Color Variations<button onclick="next(2, <?php echo $firstID ?>)">&gt;</button></h2>
                     <div class="modal-content">
                         <?php #print a div for each image
                             $s = 0;
