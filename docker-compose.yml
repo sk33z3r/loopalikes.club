@@ -23,18 +23,18 @@ services:
       loopalikes:
         ipv4_address: 172.125.0.110
 
-  mongo:
-    container_name: "loopalikes.mongo"
-    image: mongo
-    volumes:
-      - loopalikes.mongo:/data/db:rw
-    restart: unless-stopped
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASS}
-    networks:
-      loopalikes:
-        ipv4_address: 172.125.0.200
+  #mongo:
+  #  container_name: "loopalikes.mongo"
+  #  image: mongo
+  #  volumes:
+  #    - loopalikes.mongo:/data/db:rw
+  #  restart: unless-stopped
+  #  environment:
+  #    MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+  #    MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASS}
+  #  networks:
+  #    loopalikes:
+  #      ipv4_address: 172.125.0.200
 
 networks:
   loopalikes:
