@@ -43,6 +43,8 @@ get_all() {
             echo "    Getting and resizing images for Loophead #$id..."
             url_num=$(printf "%02d" ${num_map[$num]})
             mkdir -p $id/{original,vars}
+            echo "      IPFS CID for ${set}: ${ipfs_hashes[$set]}"
+            echo "      Subset: ${subset}"
             echo "      Downloading PNGs from IPFS..."
             curl="curl -s --connect-timeout 60 --max-time 300 ${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${subset}"
             orig="$id/original/"
@@ -118,15 +120,19 @@ get_one() {
     echo "  Getting and resizing images for Loophead #$id..."
     num=$(echo ${id: -2} | sed 's/^0*//')
     if [ -z $num ]; then num=100; fi
-    if [ $num -gt 1100 ]; then
+    if [ $id -gt 1100 ]; then
         set=$((id-num))
+        subset=$((id-num-1000))
     else
-        set=$((id-num-1000))
+        set=$((id-num))
+        subset=$((id-num))
     fi
     url_num=$(printf "%02d" ${num_map[$num]})
     mkdir -p $id/{original,vars}
+    echo "    IPFS CID for ${set}: ${ipfs_hashes[$set]}"
+    echo "    Subset: ${subset}"
     echo "    Downloading PNGs from IPFS..."
-    curl="curl -s --connect-timeout 60 --max-time 300 ${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${set}"
+    curl="curl -s --connect-timeout 60 --max-time 300 ${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${subset}"
     orig="$id/original/"
     ${curl}_0_0.png > ${orig}0-0.png &
     ${curl}_0_1.png > ${orig}0-1.png &
