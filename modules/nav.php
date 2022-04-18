@@ -6,10 +6,11 @@
         <a href="showcase"><button <?php if ( $page === "showcase" ) { echo 'class="active"'; } ?>>SHOWCASE</button></a>
         <a href="gifs"><button <?php if ( $page === "gifs" ) { echo 'class="active"'; } ?>>GIFS</button></a>
         <a href="guides"><button <?php if ( $page === "guides" ) { echo 'class="active"'; } ?>>GUIDES</button></a>
+        <a href="horrendous"><button <?php if ( $page === "horrendous" ) { echo 'class="active"'; } ?>>UGLIEST</button></a>
+        <a href="graveyard"><button <?php if ( $page === "graveyard" ) { echo 'class="active"'; } ?>>GRAVEYARD</button></a>
     </div>
     <div id="ext-nav">
         <a target="_blank" href="https://loopheadexplorer.io"><button>EXPLORER</button></a>
         <!-- <a href="/loopheadexplorer"><button>EXPLORER</button></a> -->
-        <a target="_blank" href="https://opensea.io/collection/moody-brain-loopring"><button>OPENSEA</button></a>
     </div>
 </div>
