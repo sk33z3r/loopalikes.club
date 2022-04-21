@@ -22,8 +22,12 @@
             </div>
             <div class="lore">
                 <p>Final Resting Address: <?php echo $graveyard[$count]["details"][0] ?></p>
-                <p><a href="<?php echo $graveyard[$count]['details'][1] ?>" target="_blank">Loophead on Lexplorer</a></p>
-                <p><a href="<?php echo $graveyard[$count]['details'][2] ?>" target="_blank">Wallet on Lexplorer</a></p>
+                <div class="grave-row">
+                    <a href="<?php echo $graveyard[$count]['details'][1] ?>" target="_blank"><button class="grave-btn">Loophead on Lexplorer</button></a>
+                    <a href="<?php echo $graveyard[$count]['details'][2] ?>" target="_blank"><button class="grave-btn">Wallet on Lexplorer</button></a>
+                </div>
+                <h4>What Happened?</h4>
+                <p><?php echo $graveyard[$count]['details'][3] ?></p>
             </div>
         </div>
         <?php if ( $count < (count($graveyard) - 1) ) { echo '<div class="text"><hr noshade></div>'; } ?>
