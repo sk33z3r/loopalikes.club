@@ -49,7 +49,7 @@
     </div>
 
     <div class="drop-btn" onclick="drop(2)">
-        <button>Loopheads Airdrop No. 2: IDs #1201 - #2100</button>
+        <button>Loopheads Airdrop No. 2: IDs #1101 - #2100</button>
     </div>
 
     <div class="drop" id="drop2">
