@@ -83,8 +83,8 @@ get_all() {
             echo "      Downloading PNGs from IPFS..."
             orig="${id}/original"
             vars="${id}/vars"
-            bg=0; while [ $bg < 5 ]; do
-                b=0; while [ $b < 5 ]; do
+            bg=0; while [ $bg -lt 5 ]; do
+                b=0; while [ $b -lt 5 ]; do
                     loop_url="${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${subset}_${bg}_${b}.png"
                     png_file="${orig}/${bg}-${b}.png"
                     echo "        Fetching: ${loop_url}"
@@ -95,8 +95,8 @@ get_all() {
             done
             sleep $delay
             echo "    Resizing to 900x900..."
-            bg=0; while [ $bg < 5 ]; do
-                b=0; while [ $b < 5 ]; do
+            bg=0; while [ $bg -lt 5 ]; do
+                b=0; while [ $b -lt 5 ]; do
                 png_file="${bg}-${b}.png"
                     convert $orig/$png_file -alpha remove -resize 900x900 $vars/$png_file
                     ((b++))
@@ -138,8 +138,8 @@ get_one() {
     echo "    Downloading PNGs from IPFS..."
     orig="${id}/original"
     vars="${id}/vars"
-    bg=0; while [ $bg < 5 ]; do
-        b=0; while [ $b < 5 ]; do
+    bg=0; while [ $bg -lt 5 ]; do
+        b=0; while [ $b -lt 5 ]; do
             loop_url="${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${subset}_${bg}_${b}.png"
             png_file="${orig}/${bg}-${b}.png"
             echo "        Fetching: ${loop_url}"
@@ -150,8 +150,8 @@ get_one() {
     done
     sleep $delay
     echo "    Resizing to 900x900..."
-    bg=0; while [ $bg < 5 ]; do
-        b=0; while [ $b < 5 ]; do
+    bg=0; while [ $bg -lt 5 ]; do
+        b=0; while [ $b -lt 5 ]; do
         png_file="${bg}-${b}.png"
             convert $orig/$png_file -alpha remove -resize 900x900 $vars/$png_file
             ((b++))
