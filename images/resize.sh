@@ -8,7 +8,7 @@ range() {
         echo "Missing ending ID"
         exit 1
     fi
-    while [ $s -lt $e ]; do
+    while [ $s -lt $((e++)) ]; do
         echo "Resizing #$s..."
         find $s/vars -type f -name "*.png" -exec convert "{}" -resize 250x250 "{}" \;
         ((s++))
