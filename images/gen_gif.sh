@@ -450,6 +450,13 @@ case $1 in
     smash_all) smash_sane_gif 2> $make_errors;;
     smash_chaos) smash_everything_gif 2> $make_errors;;
     shrink) shrink_static 2> $shrink_errors;;
+    tail)
+        case $2 in
+            shrink) tail -f $shrink_errors;;
+            make) tail -f $make_errors;;
+            *) tail -f $get_errors;;
+        esac
+    ;;
     *) echo "You didn't specify a command: $0 [all|one|list|get_all|get_one|get_list|make_all|make_one|make_list|smash_all|smash_chaos] {ID}"; exit 1;;
 esac
 
