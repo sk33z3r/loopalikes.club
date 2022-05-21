@@ -22,9 +22,6 @@ else
     delay=$(cat $delay_file)
 fi
 
-# set size per drop
-set=100
-
 # Set to the highest released ID + 1
 highest_id=3101
 
@@ -63,6 +60,9 @@ ipfs_hashes[3000]=""
 
 # download and resize all loopheads
 get_all() {
+    if [ -z $set ]; then
+        set=100
+    fi
     subset=100
     end_set=$((set+1000))
     while [ $set -lt $end_set ]; do
@@ -172,6 +172,9 @@ get_list() {
 
 # generate gifs for all loopheads
 make_all() {
+    if [ -z $set ]; then
+        set=100
+    fi
     while [ $set -lt $end_set ]; do
         num=1
         echo "  Making gifs from set $set..."
