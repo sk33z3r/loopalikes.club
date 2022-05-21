@@ -78,16 +78,16 @@ get_all() {
             echo "    Getting and resizing images for Loophead #$id..."
             url_num=$(printf "%02d" ${num_map[$num]})
             mkdir -p $id/{original,vars}
-            echo "      IPFS CID for ${set}: ${ipfs_hashes[$set]}"
-            echo "      Subset: ${subset}"
-            echo "      Downloading PNGs from IPFS..."
+            echo "    IPFS CID for ${set}: ${ipfs_hashes[$set]}"
+            echo "    Subset: ${subset}"
+            echo "    Downloading PNGs from IPFS..."
             orig="${id}/original"
             vars="${id}/vars"
             bg=0; while [ $bg -lt 5 ]; do
                 b=0; while [ $b -lt 5 ]; do
                     loop_url="${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${subset}_${bg}_${b}.png"
                     png_file="${orig}/${bg}-${b}.png"
-                    echo "        Fetching: ${loop_url}"
+                    echo "      Fetching: ${loop_url}"
                     curl -s --connect-timeout 60 --max-time 300 $loop_url > $png_file &
                     ((b++))
                 done
@@ -103,7 +103,7 @@ get_all() {
                 done
                 ((bg++))
             done
-            echo "      Deleting originals for #$id..."
+            echo "    Deleting originals for #$id..."
             rm -r $id/original
             ((num++))
         done
@@ -143,7 +143,7 @@ get_one() {
         b=0; while [ $b -lt 5 ]; do
             loop_url="${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${subset}_${bg}_${b}.png"
             png_file="${orig}/${bg}-${b}.png"
-            echo "        Fetching: ${loop_url}"
+            echo "      Fetching: ${loop_url}"
             curl -s --connect-timeout 60 --max-time 300 $loop_url > $png_file &
             ((b++))
         done
@@ -196,9 +196,9 @@ make_all() {
                 file2="${id}/vars/${bg}-2.png"
                 file3="${id}/vars/${bg}-3.png"
                 new_file="$id/${id}_${bg}_throb_900x900.gif"
-                echo "    Generating throbbing brain gif for #$id background $bg..."
+                echo "      Generating throbbing brain gif for #$id background $bg..."
                 convert -loop 0 -delay 20 $file0 -delay 15 $file1 -delay 10 $file2 -delay 10 $file3 -delay 10 $file2 -delay 15 $file1 -delay 10 $file0 $new_file
-                echo "    Adding label to #$id background $bg..."
+                echo "      Adding label to #$id background $bg..."
                 convert $new_file -font $font -pointsize 30 -draw "fill $color rectangle ${rect[0]},${rect[1]} ${rect[2]},${rect[3]} fill white text ${text[0]},${text[1]} '${text[2]}'" $new_file
                 ((bg++))
             done
@@ -207,13 +207,13 @@ make_all() {
             random_file="$root/$id/${id}_random_900x900.gif"
             echo "    Generating random cycle gif for #$id..."
             convert -delay 50 -loop 0 $filelist_random $random_file
-            echo "    Adding label to random cycle gif for #$id..."
+            echo "      Adding label to random cycle gif for #$id..."
             convert $random_file -font $font -pointsize 30 -draw "fill $color rectangle ${rect[0]},${rect[1]} ${rect[2]},${rect[3]} fill white text ${text[0]},${text[1]} '${text[2]}'" $random_file
             filelist_sequence=$(ls)
             showcase_file="$root/$id/${id}_showcase_900x900.gif"
             echo "    Generating cycle showcase gif for #$id..."
             convert -delay 50 -loop 0 $filelist_sequence $showcase_file
-            echo "    Adding label to showcase gif for #$id..."
+            echo "      Adding label to showcase gif for #$id..."
             convert $showcase_file -font $font -pointsize 30 -draw "fill $color rectangle ${rect[0]},${rect[1]} ${rect[2]},${rect[3]} fill white text ${text[0]},${text[1]} '${text[2]}'" $showcase_file
             cd $root
             ((num++))
@@ -244,24 +244,24 @@ make_one() {
         file2="${id}/vars/${bg}-2.png"
         file3="${id}/vars/${bg}-3.png"
         new_file="$id/${id}_${bg}_throb_900x900.gif"
-        echo "  Generating throbbing brain gif for #$id background $bg..."
+        echo "    Generating throbbing brain gif for #$id background $bg..."
         convert -loop 0 -delay 20 $file0 -delay 15 $file1 -delay 10 $file2 -delay 10 $file3 -delay 10 $file2 -delay 15 $file1 -delay 10 $file0 $id/${id}_${bg}_throb_900x900.gif
-        echo "  Adding label to #$id background $bg..."
+        echo "      Adding label to #$id background $bg..."
         convert $new_file -font $font -pointsize 30 -draw "fill $color rectangle ${rect[0]},${rect[1]} ${rect[2]},${rect[3]} fill white text ${text[0]},${text[1]} '${text[2]}'" $new_file
         ((bg++))
     done
     cd $id/vars
     filelist_random=$(ls | sort -R)
     random_file="$root/$id/${id}_random_900x900.gif"
-    echo "  Generating random cycle gif for #$id..."
+    echo "    Generating random cycle gif for #$id..."
     convert -delay 50 -loop 0 $filelist_random $random_file
-    echo "  Adding label to random cycle gif for #$id..."
+    echo "      Adding label to random cycle gif for #$id..."
     convert $random_file -font $font -pointsize 30 -draw "fill $color rectangle ${rect[0]},${rect[1]} ${rect[2]},${rect[3]} fill white text ${text[0]},${text[1]} '${text[2]}'" $random_file
     filelist_sequence=$(ls)
     showcase_file="$root/$id/${id}_showcase_900x900.gif"
-    echo "  Generating cycle showcase gif for #$id..."
+    echo "    Generating cycle showcase gif for #$id..."
     convert -delay 50 -loop 0 $filelist_sequence $showcase_file
-    echo "  Adding label to showcase gif for #$id..."
+    echo "      Adding label to showcase gif for #$id..."
     convert $showcase_file -font $font -pointsize 30 -draw "fill $color rectangle ${rect[0]},${rect[1]} ${rect[2]},${rect[3]} fill white text ${text[0]},${text[1]} '${text[2]}'" $showcase_file
     cd $root
 }
