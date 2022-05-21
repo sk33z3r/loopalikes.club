@@ -1,12 +1,27 @@
 #!/usr/bin/env bash
 
+# define roots
 root=$PWD
 ipfs_root="https://loopring.mypinata.cloud/ipfs/"
-color="#2d2f4b"
+
+# define file paths
 font="$root/ttp.ttf"
+get_errors="$root/get_errors.log"
+make_errors="$root/make_errors.log"
+id_list="$root/.id_list"
+shrink_errors="$root/shrink_errors.log"
+
+# define some global details
+color="#2d2f4b"
+delay=5
+
+# set size per drop
 set=100
+
+# Set to the highest released ID + 1
 highest_id=3101
 
+# define cid hashes for set folders
 declare -A ipfs_hashes
 ipfs_hashes[100]="QmaSLzmo1mNqZi5VeRCuL9yhNoKAwmfdWFeuhVFLFBCcYm"
 ipfs_hashes[200]="QmcWQ91zTFfDAtNiVJnifrwgrSqWK8cLiuD68F7YSMAhYM"
@@ -39,6 +54,7 @@ ipfs_hashes[2800]="QmPQdkw4mznJS1ApdDuSep6fk4FZoDSbRdzAZXXhiN2Q4u"
 ipfs_hashes[2900]=""
 ipfs_hashes[3000]=""
 
+# download and resize all loopheads
 get_all() {
     subset=100
     end_set=$((set+1000))
@@ -85,7 +101,7 @@ get_all() {
             ${curl}_4_2.png > ${orig}4-2.png &
             ${curl}_4_3.png > ${orig}4-3.png &
             ${curl}_4_4.png > ${orig}4-4.png
-            sleep 4
+            sleep $delay
             echo "      Resizing to 900x900..."
             convert="-alpha remove -resize 900x900 $id/vars/"
             convert ${orig}0-0.png ${convert}0-0.png
@@ -122,6 +138,7 @@ get_all() {
     done
 }
 
+# download and resize one loophead
 get_one() {
     id=$1
     if [ $id -gt 1000 ] && [ $id -lt 1101 ]; then
@@ -172,7 +189,7 @@ get_one() {
     ${curl}_4_2.png > ${orig}4-2.png &
     ${curl}_4_3.png > ${orig}4-3.png &
     ${curl}_4_4.png > ${orig}4-4.png
-    sleep 4
+    sleep $delay
     echo "    Resizing to 900x900..."
     convert="-alpha remove -resize 900x900 $id/vars/"
     convert ${orig}0-0.png ${convert}0-0.png
@@ -204,12 +221,14 @@ get_one() {
     rm -r $id/original
 }
 
+# download and resize a list of loopheads
 get_list() {
-    for l in $(cat .id_list); do
+    for l in $(cat $id_list); do
         get_one $l
     done
 }
 
+# generate gifs for all loopheads
 make_all() {
     while [ $set -lt $end_set ]; do
         num=1
@@ -258,6 +277,7 @@ make_all() {
     done
 }
 
+# generate gifs for one loophead
 make_one() {
     id=$1
     if [ $id -gt 999 ]; then
@@ -301,12 +321,14 @@ make_one() {
     cd $root
 }
 
+# generate gifs for list of loopheads
 make_list() {
-    for l in $(cat .id_list); do
+    for l in $(cat $id_list); do
         make_one $l
     done
 }
 
+# generate a "sane" gif of all loopheads
 smash_sane_gif() {
     cd $root
     file_list=()
@@ -324,6 +346,7 @@ smash_sane_gif() {
     convert -delay 25 -loop 0 ${file_list[@]} $smash_file
 }
 
+# create a gif of all loopheads
 smash_everything_gif() {
     cd $root
     file_list=".temp_list" && touch $file_list
@@ -339,14 +362,21 @@ smash_everything_gif() {
     smash_file="$root/smash_chaos_900x900.gif"
     echo "  Generating the chaotically smashed collection gif..."
     random_list=$(cat $file_list | sort -R)
-    convert -delay 25 -loop 0 $random_list $smash_file
+    convert -delay 5 -loop 0 $random_list $smash_file
     rm $file_list
 }
 
+# shrink all files to 250x250
 shrink_static() {
     find $root -type f -name "*.png" -exec convert "{}" -resize 250x250 "{}" \;
 }
 
+# generate a list of loophead IDs that had errors during a download run
+gen_list() {
+    cat $get_errors | grep "no images defined" | awk '{print $5}' | grep -o -E "[0-9]{4}" | uniq > $id_list
+}
+
+# run the script
 echo "Running $1 command..."
 
 case $1 in
@@ -354,64 +384,65 @@ case $1 in
         if [ ! -z $2 ]; then
             set=$2
         fi
-        get_all
-        make_all
+        get_all 2> $get_errors
+        make_all 2> $make_errors
     ;;
     one)
         if [ ! -z $2 ]; then
-            get_one $2
-            make_one $2
+            get_one $2 2> $get_errors
+            make_one $2 2> $make_errors
         else
             echo "You didn't specify an ID: $0 one {ID}"
             exit 1
         fi
     ;;
     list)
-        if [ ! -f .id_list ]; then
-            echo "Could not find .id_list file."
+        if [ ! -f $id_list ]; then
+            echo "Could not find $id_list file."
             exit 1
         else
-            get_list
-            make_list
+            get_list 2> $get_errors
+            make_list 2> $make_errors
         fi
     ;;
     get_all) get_all;;
     get_one)
         if [ ! -z $2 ]; then
-            get_one $2
+            get_one $2 2> $get_errors
         else
             echo "You didn't specify an ID: $0 one {ID}"
             exit 1
         fi
     ;;
     get_list)
-        if [ ! -f .id_list ]; then
-            echo "Could not find .id_list file."
+        if [ ! -f $id_list ]; then
+            echo "Could not find $id_list file."
             exit 1
         else
-            get_list
+            get_list 2> $get_errors
         fi
     ;;
     make_all) make_all;;
     make_one)
         if [ ! -z $2 ]; then
-            make_one $2
+            make_one $2 2> $make_errors
         else
             echo "You didn't specify an ID: $0 make_one {ID}"
             exit 1
         fi
     ;;
     make_list)
-        if [ ! -f .id_list ]; then
-            echo "Could not find .id_list file."
+        if [ ! -f $id_list ]; then
+            echo "Could not find $id_list file."
             exit 1
         else
-            make_list
+            make_list 2> $make_errors
         fi
     ;;
-    smash_all) smash_sane_gif;;
-    smash_chaos) smash_everything_gif;;
-    shrink) shrink_static;;
+    gen_list) gen_list;;
+    smash_all) smash_sane_gif 2> $make_errors;;
+    smash_chaos) smash_everything_gif 2> $make_errors;;
+    shrink) shrink_static 2> $shrink_errors;;
     *) echo "You didn't specify a command: $0 [all|one|list|get_all|get_one|get_list|make_all|make_one|make_list|smash_all|smash_chaos] {ID}"; exit 1;;
 esac
 
