@@ -125,8 +125,9 @@ get_one() {
     if [ -z $num ]; then num=100; fi
     if [ $id -gt 1100 ]; then
         set=$((id-num))
-        offset=$((set-100))
-        subset=$((id-num-offset))
+        mult=$(echo ${set: 1})
+        offset=$((mult*1000))
+        subset=$((set-offset))
     else
         set=$((id-num))
         subset=$((id-num))
