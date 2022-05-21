@@ -311,9 +311,28 @@ smash_everything_gif() {
     rm $file_list
 }
 
-# shrink all files to 250x250
-shrink_static() {
-    find $root -type f -name "*.png" -exec convert "{}" -resize 250x250 "{}" \;
+# resize a range of IDs
+shrink_range() {
+    s=$1
+    e=$2
+    if [ -z $e ]; then
+        echo "Missing ending ID"
+        exit 1
+    else
+        ((e++))
+    fi
+    while [ $s -lt $e ]; do
+        echo "Resizing #$s..."
+        find $s/vars -type f -name "*.png" -exec convert "{}" -resize 250x250 "{}" \;
+        ((s++))
+    done
+}
+
+# resize IDs from a list
+shrink_list() {
+    for l in $(cat $id_list); do
+        find $l/vars -type f -name "*.png" -exec convert "{}" -resize 250x250 "{}" \;
+    done
 }
 
 # generate a list of loophead IDs that had errors during a download run
@@ -387,7 +406,8 @@ case $1 in
     gen_list) gen_list;;
     smash_all) smash_sane_gif 2> $make_errors;;
     smash_chaos) smash_everything_gif 2> $make_errors;;
-    shrink) shrink_static 2> $shrink_errors;;
+    shrink_list) shrink_list 2> $shrink_errors;;
+    shrink_range) shrink_range $1 $2 2> $shrink_errors;;
     tail)
         case $2 in
             shrink) tail -f $shrink_errors;;
