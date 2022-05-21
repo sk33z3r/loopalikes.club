@@ -4,9 +4,8 @@ root=$PWD
 ipfs_root="https://loopring.mypinata.cloud/ipfs/"
 color="#2d2f4b"
 font="$root/ttp.ttf"
-set=2100
-end_set=$((set+1000))
-offset=$((set-100))
+set=100
+highest_id=3101
 
 declare -A ipfs_hashes
 ipfs_hashes[100]="QmaSLzmo1mNqZi5VeRCuL9yhNoKAwmfdWFeuhVFLFBCcYm"
@@ -42,6 +41,7 @@ ipfs_hashes[3000]=""
 
 get_all() {
     subset=100
+    end_set=$((set+1000))
     while [ $set -lt $end_set ]; do
         if [ $set -eq 1000 ]; then
             num_map=("_index" 6 7 8 9 10 101 102 103 104 105 106 107 108 109 11 110 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95)
@@ -124,6 +124,7 @@ get_all() {
 
 get_one() {
     id=$1
+    offset=$((set-100))
     if [ $id -gt 1000 ] && [ $id -lt 1101 ]; then
         num_map=("_index" 6 7 8 9 10 101 102 103 104 105 106 107 108 109 11 110 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95)
     else
@@ -310,7 +311,7 @@ smash_sane_gif() {
     cd $root
     file_list=()
     id=101
-    while [ $id -lt 1101 ]; do
+    while [ $id -lt $highest_id ]; do
         imgs="$root/$id/vars"
         cd $imgs
         file=$(ls | sort -R | tail -1)
@@ -327,7 +328,7 @@ smash_everything_gif() {
     cd $root
     file_list=".temp_list" && touch $file_list
     id=101
-    while [ $id -lt 1101 ]; do
+    while [ $id -lt $highest_id ]; do
         imgs="$root/$id/vars"
         cd $imgs
         file=$(ls | sort -R | tail -1)
@@ -349,7 +350,13 @@ shrink_static() {
 echo "Running $1 command..."
 
 case $1 in
-    all) get_all; make_all;;
+    all)
+        if [ ! -z $2 ]; then
+            set=$2
+        fi
+        get_all
+        make_all
+    ;;
     one)
         if [ ! -z $2 ]; then
             get_one $2
