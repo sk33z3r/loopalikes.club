@@ -4,6 +4,8 @@ root=$PWD
 ipfs_root="https://loopring.mypinata.cloud/ipfs/"
 color="#2d2f4b"
 font="$root/ttp.ttf"
+set=2100
+end_set=3100
 
 declare -A ipfs_hashes
 ipfs_hashes[100]="QmaSLzmo1mNqZi5VeRCuL9yhNoKAwmfdWFeuhVFLFBCcYm"
@@ -26,11 +28,20 @@ ipfs_hashes[1700]="QmfLxCd4tXcHVke9oXRNWjiYHBeKdEN1MRVWVQ2tQAbLvZ"
 ipfs_hashes[1800]="Qmf2wE7afYakgFXSxoWVMyJsm2yMLecLt1cHCAm79QMTgw"
 ipfs_hashes[1900]="QmdzwxdJLYVaV6SRvqiHq7wAVPsyZv52c91goDDuhVJX5q"
 ipfs_hashes[2000]="QmWXQ6rGWPxMtuHUdHCgsWw1tT7vkhvbzxJPc3kmH3BXKR"
+ipfs_hashes[2100]="QmVHwaoSLSFYfj3XdN2P8K2zyQyXqvZBzMa4fzMx7BirHY"
+ipfs_hashes[2200]="QmanSHegmejjhhaP4WzEtoLXjxUxjFnV5jaCqGV1WBiq2T"
+ipfs_hashes[2300]="QmZW3hh3eV1rEPtUG83LVT3eyERuXzH8y3n5JXGYSx8CA7"
+ipfs_hashes[2400]="QmPmNM1J8knzg9dNDQrsUbUeWmGbGgu7EAr9rRp5AoU5oF"
+ipfs_hashes[2500]="QmdAFJjnrYARWkKswTxGbG1FkmzsHeNfrrdkeEzC1DEHN6"
+ipfs_hashes[2600]=""
+ipfs_hashes[2700]=""
+ipfs_hashes[2800]=""
+ipfs_hashes[2900]=""
+ipfs_hashes[3000]=""
 
 get_all() {
-    set=1100
     subset=100
-    while [ $set -lt 2100 ]; do
+    while [ $set -lt $end_set ]; do
         if [ $set -eq 1000 ]; then
             num_map=("_index" 6 7 8 9 10 101 102 103 104 105 106 107 108 109 11 110 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95)
         else
@@ -198,8 +209,7 @@ get_list() {
 }
 
 make_all() {
-    set=1100
-    while [ $set -lt 2100 ]; do
+    while [ $set -lt $end_set ]; do
         num=1
         echo "  Making gifs from set $set..."
         while [ $num -lt 101 ]; do
