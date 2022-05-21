@@ -5,7 +5,8 @@ ipfs_root="https://loopring.mypinata.cloud/ipfs/"
 color="#2d2f4b"
 font="$root/ttp.ttf"
 set=2100
-end_set=3100
+end_set=$((set+1000))
+offset=$((set-100))
 
 declare -A ipfs_hashes
 ipfs_hashes[100]="QmaSLzmo1mNqZi5VeRCuL9yhNoKAwmfdWFeuhVFLFBCcYm"
@@ -133,7 +134,7 @@ get_one() {
     if [ -z $num ]; then num=100; fi
     if [ $id -gt 1100 ]; then
         set=$((id-num))
-        subset=$((id-num-1000))
+        subset=$((id-num-$offset))
     else
         set=$((id-num))
         subset=$((id-num))
