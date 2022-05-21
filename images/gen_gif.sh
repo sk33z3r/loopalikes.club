@@ -10,10 +10,17 @@ get_errors="$root/get_errors.log"
 make_errors="$root/make_errors.log"
 id_list="$root/.id_list"
 shrink_errors="$root/shrink_errors.log"
+delay_file="$root/.delay"
 
 # define some global details
 color="#2d2f4b"
-delay=5
+
+if [ ! -f $delay_file ]; then
+    echo 3 > $delay_file
+    delay=3
+else
+    delay=$(cat $delay_file)
+fi
 
 # set size per drop
 set=100

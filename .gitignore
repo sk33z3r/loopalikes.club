@@ -4,3 +4,4 @@ images/.id_list
 *.gif
 *.json
 .env*
+.delay
