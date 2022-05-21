@@ -16,8 +16,8 @@ delay_file="$root/.delay"
 color="#2d2f4b"
 
 if [ ! -f $delay_file ]; then
-    echo 3 > $delay_file
-    delay=3
+    echo 5 > $delay_file
+    delay=5
 else
     delay=$(cat $delay_file)
 fi
@@ -81,61 +81,28 @@ get_all() {
             echo "      IPFS CID for ${set}: ${ipfs_hashes[$set]}"
             echo "      Subset: ${subset}"
             echo "      Downloading PNGs from IPFS..."
-            curl="curl -s --connect-timeout 60 --max-time 300 ${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${subset}"
-            orig="$id/original/"
-            ${curl}_0_0.png > ${orig}0-0.png &
-            ${curl}_0_1.png > ${orig}0-1.png &
-            ${curl}_0_2.png > ${orig}0-2.png &
-            ${curl}_0_3.png > ${orig}0-3.png &
-            ${curl}_0_4.png > ${orig}0-4.png &
-            ${curl}_1_0.png > ${orig}1-0.png &
-            ${curl}_1_1.png > ${orig}1-1.png &
-            ${curl}_1_2.png > ${orig}1-2.png &
-            ${curl}_1_3.png > ${orig}1-3.png &
-            ${curl}_1_4.png > ${orig}1-4.png &
-            ${curl}_2_0.png > ${orig}2-0.png &
-            ${curl}_2_1.png > ${orig}2-1.png &
-            ${curl}_2_2.png > ${orig}2-2.png &
-            ${curl}_2_3.png > ${orig}2-3.png &
-            ${curl}_2_4.png > ${orig}2-4.png &
-            ${curl}_3_0.png > ${orig}3-0.png &
-            ${curl}_3_1.png > ${orig}3-1.png &
-            ${curl}_3_2.png > ${orig}3-2.png &
-            ${curl}_3_3.png > ${orig}3-3.png &
-            ${curl}_3_4.png > ${orig}3-4.png &
-            ${curl}_4_0.png > ${orig}4-0.png &
-            ${curl}_4_1.png > ${orig}4-1.png &
-            ${curl}_4_2.png > ${orig}4-2.png &
-            ${curl}_4_3.png > ${orig}4-3.png &
-            ${curl}_4_4.png > ${orig}4-4.png
+            orig="${id}/original"
+            vars="${id}/vars"
+            bg=0; while [ $bg < 5 ]; do
+                b=0; while [ $b < 5 ]; do
+                    loop_url="${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${subset}_${bg}_${b}.png"
+                    png_file="${orig}/${bg}-${b}.png"
+                    echo "        Fetching: ${loop_url}"
+                    curl -s --connect-timeout 60 --max-time 300 $loop_url > $png_file &
+                    ((b++))
+                done
+                ((bg++))
+            done
             sleep $delay
-            echo "      Resizing to 900x900..."
-            convert="-alpha remove -resize 900x900 $id/vars/"
-            convert ${orig}0-0.png ${convert}0-0.png
-            convert ${orig}0-1.png ${convert}0-1.png
-            convert ${orig}0-2.png ${convert}0-2.png
-            convert ${orig}0-3.png ${convert}0-3.png
-            convert ${orig}0-4.png ${convert}0-4.png
-            convert ${orig}1-0.png ${convert}1-0.png
-            convert ${orig}1-1.png ${convert}1-1.png
-            convert ${orig}1-2.png ${convert}1-2.png
-            convert ${orig}1-3.png ${convert}1-3.png
-            convert ${orig}1-4.png ${convert}1-4.png
-            convert ${orig}2-0.png ${convert}2-0.png
-            convert ${orig}2-1.png ${convert}2-1.png
-            convert ${orig}2-2.png ${convert}2-2.png
-            convert ${orig}2-3.png ${convert}2-3.png
-            convert ${orig}2-4.png ${convert}2-4.png
-            convert ${orig}3-0.png ${convert}3-0.png
-            convert ${orig}3-1.png ${convert}3-1.png
-            convert ${orig}3-2.png ${convert}3-2.png
-            convert ${orig}3-3.png ${convert}3-3.png
-            convert ${orig}3-4.png ${convert}3-4.png
-            convert ${orig}4-0.png ${convert}4-0.png
-            convert ${orig}4-1.png ${convert}4-1.png
-            convert ${orig}4-2.png ${convert}4-2.png
-            convert ${orig}4-3.png ${convert}4-3.png
-            convert ${orig}4-4.png ${convert}4-4.png
+            echo "    Resizing to 900x900..."
+            bg=0; while [ $bg < 5 ]; do
+                b=0; while [ $b < 5 ]; do
+                png_file="${bg}-${b}.png"
+                    convert $orig/$png_file -alpha remove -resize 900x900 $vars/$png_file
+                    ((b++))
+                done
+                ((bg++))
+            done
             echo "      Deleting originals for #$id..."
             rm -r $id/original
             ((num++))
@@ -169,63 +136,30 @@ get_one() {
     echo "    IPFS CID for ${set}: ${ipfs_hashes[$set]}"
     echo "    Subset: ${subset}"
     echo "    Downloading PNGs from IPFS..."
-    curl="curl -s --connect-timeout 60 --max-time 300 ${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${subset}"
-    orig="$id/original/"
-    ${curl}_0_0.png > ${orig}0-0.png &
-    ${curl}_0_1.png > ${orig}0-1.png &
-    ${curl}_0_2.png > ${orig}0-2.png &
-    ${curl}_0_3.png > ${orig}0-3.png &
-    ${curl}_0_4.png > ${orig}0-4.png &
-    ${curl}_1_0.png > ${orig}1-0.png &
-    ${curl}_1_1.png > ${orig}1-1.png &
-    ${curl}_1_2.png > ${orig}1-2.png &
-    ${curl}_1_3.png > ${orig}1-3.png &
-    ${curl}_1_4.png > ${orig}1-4.png &
-    ${curl}_2_0.png > ${orig}2-0.png &
-    ${curl}_2_1.png > ${orig}2-1.png &
-    ${curl}_2_2.png > ${orig}2-2.png &
-    ${curl}_2_3.png > ${orig}2-3.png &
-    ${curl}_2_4.png > ${orig}2-4.png &
-    ${curl}_3_0.png > ${orig}3-0.png &
-    ${curl}_3_1.png > ${orig}3-1.png &
-    ${curl}_3_2.png > ${orig}3-2.png &
-    ${curl}_3_3.png > ${orig}3-3.png &
-    ${curl}_3_4.png > ${orig}3-4.png &
-    ${curl}_4_0.png > ${orig}4-0.png &
-    ${curl}_4_1.png > ${orig}4-1.png &
-    ${curl}_4_2.png > ${orig}4-2.png &
-    ${curl}_4_3.png > ${orig}4-3.png &
-    ${curl}_4_4.png > ${orig}4-4.png
+    orig="${id}/original"
+    vars="${id}/vars"
+    bg=0; while [ $bg < 5 ]; do
+        b=0; while [ $b < 5 ]; do
+            loop_url="${ipfs_root}${ipfs_hashes[$set]}/loophead${url_num}_${subset}_${bg}_${b}.png"
+            png_file="${orig}/${bg}-${b}.png"
+            echo "        Fetching: ${loop_url}"
+            curl -s --connect-timeout 60 --max-time 300 $loop_url > $png_file &
+            ((b++))
+        done
+        ((bg++))
+    done
     sleep $delay
     echo "    Resizing to 900x900..."
-    convert="-alpha remove -resize 900x900 $id/vars/"
-    convert ${orig}0-0.png ${convert}0-0.png
-    convert ${orig}0-1.png ${convert}0-1.png
-    convert ${orig}0-2.png ${convert}0-2.png
-    convert ${orig}0-3.png ${convert}0-3.png
-    convert ${orig}0-4.png ${convert}0-4.png
-    convert ${orig}1-0.png ${convert}1-0.png
-    convert ${orig}1-1.png ${convert}1-1.png
-    convert ${orig}1-2.png ${convert}1-2.png
-    convert ${orig}1-3.png ${convert}1-3.png
-    convert ${orig}1-4.png ${convert}1-4.png
-    convert ${orig}2-0.png ${convert}2-0.png
-    convert ${orig}2-1.png ${convert}2-1.png
-    convert ${orig}2-2.png ${convert}2-2.png
-    convert ${orig}2-3.png ${convert}2-3.png
-    convert ${orig}2-4.png ${convert}2-4.png
-    convert ${orig}3-0.png ${convert}3-0.png
-    convert ${orig}3-1.png ${convert}3-1.png
-    convert ${orig}3-2.png ${convert}3-2.png
-    convert ${orig}3-3.png ${convert}3-3.png
-    convert ${orig}3-4.png ${convert}3-4.png
-    convert ${orig}4-0.png ${convert}4-0.png
-    convert ${orig}4-1.png ${convert}4-1.png
-    convert ${orig}4-2.png ${convert}4-2.png
-    convert ${orig}4-3.png ${convert}4-3.png
-    convert ${orig}4-4.png ${convert}4-4.png
+    bg=0; while [ $bg < 5 ]; do
+        b=0; while [ $b < 5 ]; do
+        png_file="${bg}-${b}.png"
+            convert $orig/$png_file -alpha remove -resize 900x900 $vars/$png_file
+            ((b++))
+        done
+        ((bg++))
+    done
     echo "    Deleting originals for #$id..."
-    rm -r $id/original
+    rm -r $orig
 }
 
 # download and resize a list of loopheads
