@@ -22,9 +22,11 @@ function drop(num) {
 function next(drop, id) {
     var nextID = id + 1;
     var move = false;
-    if (drop == 1 && nextID < 201) {
+    if (drop == 1 && nextID < 1101) {
         move = true;
-    } else if (drop == 2 && nextID < 1201) {
+    } else if (drop == 2 && nextID < 2101) {
+        move = true;
+    } else if (drop == 3 && nextID < 3101) {
         move = true;
     }
     if (move === true) {
@@ -40,6 +42,8 @@ function prev(drop, id) {
     if (drop == 1 && prevID > 100) {
         move = true;
     } else if (drop == 2 && prevID > 1100) {
+        move = true;
+    } else if (drop == 3 && prevID > 2100) {
         move = true;
     }
     if (move === true) {

@@ -80,6 +80,39 @@
                 <?php $id++; } ?>
         </div>
     </div>
+
+    <div class="drop-btn" onclick="drop(3)">
+        <button>Loopheads Airdrop No. 3: IDs #2101 - #3100</button>
+    </div>
+
+    <div class="drop" id="drop3">
+        <div class="showcase">
+            <?php
+                $id = 2101;
+                while ( $id <= 3100 ) { ?>
+                    <div class="gif-btn" onclick="openModal('<?php echo $id ?>')">
+                        <img loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" />
+                        <div class="gif-id">#<?php echo $id ?></div>
+                    </div>
+
+                    <!-- The Modal/Lightbox -->
+                    <div id="<?php echo $id ?>" class="modal">
+                        <span class="close cursor" onclick="closeModal('<?php echo $id ?>')">&times;</span>
+                        <h2>Loophead #<?php echo $id ?> GIFs</h2>
+                        <div class="modal-content">
+                            <?php #print a div for each image
+                                $bg = 0;
+                                while ($bg < 5) { ?>
+                                    <img class="img-border" loading="lazy" src="images/<?php echo $id ?>/<?php echo $id ?>_<?php echo $bg ?>_throb_900x900.gif" alt="Loophead #<?php echo $id ?> BG <?php echo $bg ?>">
+                            <?php $bg++; } ?>
+                            <img class="img-border" loading="lazy" src="images/<?php echo $id ?>/<?php echo $id ?>_random_900x900.gif" alt="Loophead #<?php echo $id ?> Random">
+                            <img class="img-border" loading="lazy" src="images/<?php echo $id ?>/<?php echo $id ?>_showcase_900x900.gif" alt="Loophead #<?php echo $id ?> Showcase">
+                        </div>
+                    </div>
+
+                <?php $id++; } ?>
+        </div>
+    </div>
 </div>
 
 <?php } ?>

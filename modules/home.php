@@ -4,7 +4,7 @@
     <title>Loopalike Club</title>
     <meta name="description" content="A fan-made site for all things Moody Brain by Loopring.">
 <?php }
-    if ($type === "body") { $randID = rand(101,2100); $randBG = rand(0,4); ?>
+    if ($type === "body") { $randID = rand(101,3100); $randBG = rand(0,4); ?>
     <div id="container">
         <div id="about">
             <p><small><i>This is a fan-made site for all things Loopheads from the Moody Brain NFT Collection.</i></small></p>

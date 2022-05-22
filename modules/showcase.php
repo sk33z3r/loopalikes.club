@@ -109,6 +109,43 @@
         </div>
     </div>
 
+    <div class="drop-btn" onclick="drop(3)">
+        <button>Loopheads Airdrop No. 3: IDs #2101 - #3100</button>
+    </div>
+
+    <div class="drop" id="drop3">
+        <h2>Series Loopheads</h2>
+        <div class="showcase">
+            <?php $num = 1; while ( $num <= 100 ) {
+                $slide = rand(1,9);
+                $set = $slide * 100;
+                $firstID = $num + 2100;
+                $id = $num + $set + 2000; ?>
+                <div class="showcase-img">
+                    <img class="img-border" onclick="openModal('<?php echo $firstID ?>')" loading="lazy" src="images/<?php echo $id ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $id ?>" />
+                    <div class="img-id">#<?php echo $id ?></div>
+                </div>
+
+                <!-- The Modal/Lightbox -->
+                <div id="<?php echo $firstID ?>" class="modal">
+                    <span class="close cursor" onclick="closeModal('<?php echo $firstID ?>')">&times;</span>
+                    <h2><button onclick="prev(3, <?php echo $firstID ?>)">&lt;</button>XX<?php if ($num != 100) { printf("%02d", $num); } else { echo "00"; } ?> Series Color Variations<button onclick="next(3, <?php echo $firstID ?>)">&gt;</button></h2>
+                    <div class="modal-content">
+                        <?php #print a div for each image
+                            $s = 0;
+                            while ($s < 1000) {
+                                $curID = $firstID + $s; ?>
+                                <div class="showcase-img">
+                                    <img loading="lazy" class="img-border <?php echo $firstID ?>-demo" src="images/<?php echo $curID ?>/vars/<?php echo rand(0,4) ?>-<?php echo rand(0,4) ?>.png" alt="Loophead #<?php echo $curID ?>">
+                                    <div class="img-id">#<?php echo $curID ?></div>
+                                </div>
+                        <?php $s = $s + 100; } ?>
+                    </div>
+                </div>
+            <?php $num++; } ?>
+        </div>
+    </div>
+
 </div>
 
 <?php } ?>
