@@ -174,6 +174,7 @@ make_all() {
     if [ -z $set ]; then
         set=100
     fi
+    end_set=$((set+1000))
     while [ $set -lt $end_set ]; do
         num=1
         echo "  Making gifs from set $set..."
