@@ -125,9 +125,8 @@ get_one() {
     if [ -z $num ]; then num=100; fi
     if [ $id -gt 1100 ]; then
         set=$((id-num))
-        offset=$(echo ${set: -3} | sed 's/^0*//')
-        if [ -z $offset ]; then offset=1000; fi
-        subset=$((set-offset))
+        subset=$(echo ${set: -3} | sed 's/^0*//')
+        if [ -z $subset ]; then subset=1000; fi
     else
         set=$((id-num))
         subset=$((id-num))
