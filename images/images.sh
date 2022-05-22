@@ -122,11 +122,11 @@ get_one() {
     fi
     echo "  Getting and resizing images for Loophead #$id..."
     num=$(echo ${id: -2} | sed 's/^0*//')
+    subt=$(echo ${id: -3} | sed 's/^0*//')
     if [ -z $num ]; then num=100; fi
     if [ $id -gt 1100 ]; then
         set=$((id-num))
-        mult=$(echo ${set: 1})
-        offset=$((mult*1000))
+        offset=$((id-subt))
         subset=$((set-offset))
     else
         set=$((id-num))
