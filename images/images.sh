@@ -368,7 +368,12 @@ case $1 in
             make_list 2> $make_errors
         fi
     ;;
-    get_all) get_all;;
+    get_all)
+        if [ ! -z $2 ]; then
+            set=$2
+        fi
+        get_all
+    ;;
     get_one)
         if [ ! -z $2 ]; then
             get_one $2 2> $get_errors
@@ -385,7 +390,12 @@ case $1 in
             get_list 2> $get_errors
         fi
     ;;
-    make_all) make_all;;
+    make_all)
+        if [ ! -z $2 ]; then
+            set=$2
+        fi
+        make_all
+    ;;
     make_one)
         if [ ! -z $2 ]; then
             make_one $2 2> $make_errors
