@@ -55,8 +55,8 @@ ipfs_hashes[2500]="QmdAFJjnrYARWkKswTxGbG1FkmzsHeNfrrdkeEzC1DEHN6"
 ipfs_hashes[2600]="QmYfVM6KqXG1JLmhunrfTDP1NVNA1fMJkbRU4ePQ7utKak"
 ipfs_hashes[2700]="QmbfQC2Bqw2y8FFh95F5xiuEGWm8TyqyzhgAQwufxkYcbC"
 ipfs_hashes[2800]="QmPQdkw4mznJS1ApdDuSep6fk4FZoDSbRdzAZXXhiN2Q4u"
-ipfs_hashes[2900]=""
-ipfs_hashes[3000]=""
+ipfs_hashes[2900]="QmazTdeoehDUghrJuucvuC8jKb7wX3guTybguKYKZWEjhd"
+ipfs_hashes[3000]="QmYAjHE2Xs3oxL5Z1VyqfDMT1RaSDyUAs19nvJL7Eryuao"
 
 # download and resize all loopheads
 get_all() {
