@@ -18,8 +18,6 @@
             <a href="gifs"><button>GIF ANIMATIONS</button></a>
             <a href="horrendous"><button>MOST HORRENDOUS</button></a>
             <a href="graveyard"><button>THE GRAVEYARD</button></a>
-            <a target="_blank" href="https://loopheadexplorer.io/"><button>LOOPHEADS EXPLORER</button></a>
-            <!-- <a href="/loopheadexplorer"><button>LOOPHEADS EXPLORER</button></a> -->
             <a target="_blank" href="https://loopheads.info"><button>LOOPHEADS.INFO</button></a>
             <a target="_blank" href="https://loopheads.world"><button>LOOPHEADS.WORLD</button></a>
         </div>

@@ -10,7 +10,6 @@
         <a href="graveyard"><button <?php if ( $page === "graveyard" ) { echo 'class="active"'; } ?>>GRAVEYARD</button></a>
     </div>
     <div id="ext-nav">
-        <a target="_blank" href="https://loopheadexplorer.io"><button>EXPLORER</button></a>
-        <!-- <a href="/loopheadexplorer"><button>EXPLORER</button></a> -->
+        <a target="_blank" href="https://loopheads.info"><button>INFO</button></a>
     </div>
 </div>
