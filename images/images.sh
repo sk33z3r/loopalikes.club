@@ -417,7 +417,7 @@ case $1 in
     smash_all) smash_sane_gif 2> $make_errors;;
     smash_chaos) smash_everything_gif 2> $make_errors;;
     shrink_list) shrink_list 2> $shrink_errors;;
-    shrink_range) shrink_range $1 $2 2> $shrink_errors;;
+    shrink_range) shrink_range $2 $3 2> $shrink_errors;;
     tail)
         case $2 in
             shrink) tail -f $shrink_errors;;
