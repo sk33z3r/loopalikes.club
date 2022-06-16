@@ -189,6 +189,7 @@ hr {
     right: 50px;
     font-size: 25px;
     font-weight: bold;
+    z-index: 1;
 }
 
 #to-top:hover,
