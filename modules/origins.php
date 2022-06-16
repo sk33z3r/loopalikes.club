@@ -14,9 +14,7 @@
         <p><small>A collection of origin stories for the Loopheads characters.</small></p>
         <hr noshade>
     </div>
-    <div id="to-top">
-        <a href="#about"><small>BACK TO TOP ^</small></a>
-    </div>
+    <?php include 'modules/back-to-top.html'; ?>
     <?php $count = 0; while ( $count < count($lore) ) { ?>
         <div class="comp">
             <div class="char">

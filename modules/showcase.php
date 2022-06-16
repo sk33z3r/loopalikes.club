@@ -15,9 +15,7 @@
         <hr noshade>
     </div>
 
-    <div id="to-top">
-        <a href="#about"><small>BACK TO TOP ^</small></a>
-    </div>
+    <?php include 'modules/back-to-top.html'; ?>
 
     <div class="drop-btn" onclick="drop(1)">
         <button>Loopheads Airdrop No. 1: IDs #101 - #1100</button>
