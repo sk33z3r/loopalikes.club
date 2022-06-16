@@ -12,14 +12,13 @@
         </div>
         <div class="links">
             <a href="looplegangers"><button>LOOPLEGANGERS</button></a>
-            <a href="origins"><button>ORIGIN STORIES</button></a>
             <a href="showcase"><button>SHOWCASE</button></a>
-            <a href="guides"><button>INFO & GUIDES</button></a>
-            <a href="gifs"><button>GIF ANIMATIONS</button></a>
+            <a href="assets"><button>IMAGES & GIFS</button></a>
+            <a href="origins"><button>ORIGIN STORIES</button></a>
             <a href="horrendous"><button>MOST HORRENDOUS</button></a>
             <a href="graveyard"><button>THE GRAVEYARD</button></a>
+            <a href="links"><button>INFO & GUIDES</button></a>
             <a target="_blank" href="https://loopheads.info"><button>LOOPHEADS.INFO</button></a>
-            <a target="_blank" href="https://loopheads.world"><button>LOOPHEADS.WORLD</button></a>
         </div>
     </div>
 <?php } ?>

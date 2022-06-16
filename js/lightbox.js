@@ -1,11 +1,15 @@
 // Open the Modal
 function openModal(id) {
     document.getElementById(id).style.display = "block";
+    document.getElementById("to-top").style.display = "none";
+    document.getElementsByTagName("body")[0].style.overflow = "hidden";
 }
 
 // Close the Modal
 function closeModal(id) {
     document.getElementById(id).style.display = "none";
+    document.getElementById("to-top").style.display = "block";
+    document.getElementsByTagName("body")[0].style.overflow = "auto";
 }
 
 // Display drop

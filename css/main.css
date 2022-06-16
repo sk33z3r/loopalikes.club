@@ -182,6 +182,22 @@ hr {
     justify-content: center;
 }
 
+#to-top {
+    color: white;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#to-top:hover,
+#to-top:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 /**************/
 /* ADMIN PAGE */
 /**************/

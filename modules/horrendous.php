@@ -17,6 +17,10 @@
         <hr noshade>
     </div>
 
+    <div id="to-top">
+        <a href="#about"><small>BACK TO TOP ^</small></a>
+    </div>
+
     <div class="drop">
         <?php $count = 0; while ( $count < count($horrendous) ) { ?>
             <div class="comp">

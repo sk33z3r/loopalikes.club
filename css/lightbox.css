@@ -3,23 +3,23 @@
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 12%;
+    padding-top: 5%;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     overflow: auto;
     background-color: #22243a;
 }
 
 .modal h2 {
-    margin: 0 0 35px 0;
+    margin: 0 0 25px 0;
     font-size: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    align-content: center;
-    justify-content: space-evenly;
+}
+
+.modal h3 {
+    margin: 25px 0;
+    font-size: 20px;
 }
 
 .modal button {
@@ -33,9 +33,22 @@
     margin: 0 auto;
     position: relative;
     background-color: #22243a;
-    width: 1100px;
+    width: 100vw;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.variations {
+    margin-bottom: 150px;
+    position: relative;
+    height: 100%;
+    width: 210px;
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     align-content: center;
@@ -61,13 +74,20 @@
 
 @media (max-width: 1100px) {
 
-    .modal-content {
-        width: 100%;
+    .modal h2 {
+        margin: 0 0 15px 0;
+        font-size: 22px;
     }
 
-    .modal h2 {
-        margin: 0 0 25px 0;
-        font-size: 22px;
+    .modal h3 {
+        font-size: 18px;
+    }
+
+    .variations {
+        width: 100vw;
+        margin-bottom: 25px;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
 }

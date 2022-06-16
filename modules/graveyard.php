@@ -14,6 +14,9 @@
         <p><small>Loopheads that have been lost forever to dead wallets.</small></p>
         <hr noshade>
     </div>
+    <div id="to-top">
+        <a href="#about"><small>BACK TO TOP ^</small></a>
+    </div>
     <?php $count = 0; while ( $count < count($graveyard) ) { ?>
         <div class="comp">
             <div class="char">

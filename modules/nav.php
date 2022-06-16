@@ -4,12 +4,9 @@
         <a href="looplegangers"><button <?php if ( $page === "looplegangers" ) { echo 'class="active"'; } ?>>LOOPLEGANGERS</button></a>
         <a href="origins"><button <?php if ( $page === "origins" ) { echo 'class="active"'; } ?>>ORIGINS</button></a>
         <a href="showcase"><button <?php if ( $page === "showcase" ) { echo 'class="active"'; } ?>>SHOWCASE</button></a>
-        <a href="gifs"><button <?php if ( $page === "gifs" ) { echo 'class="active"'; } ?>>GIFS</button></a>
-        <a href="guides"><button <?php if ( $page === "guides" ) { echo 'class="active"'; } ?>>GUIDES</button></a>
+        <a href="assets"><button <?php if ( $page === "assets" ) { echo 'class="active"'; } ?>>ASSETS</button></a>
         <a href="horrendous"><button <?php if ( $page === "horrendous" ) { echo 'class="active"'; } ?>>UGLIEST</button></a>
         <a href="graveyard"><button <?php if ( $page === "graveyard" ) { echo 'class="active"'; } ?>>GRAVEYARD</button></a>
-    </div>
-    <div id="ext-nav">
-        <a target="_blank" href="https://loopheads.info"><button>INFO</button></a>
+        <a href="links"><button <?php if ( $page === "links" ) { echo 'class="active"'; } ?>>LINKS</button></a>
     </div>
 </div>
